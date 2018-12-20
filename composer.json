@@ -1,0 +1,17 @@
+{
+  "name": "omerkamcili/sadmin",
+  "description": "Admin boilerpalte for laravel",
+  "type": "library",
+  "authors": [
+    {
+      "name": "Ömer Kamçılı",
+      "email": "omerkamcili@gmail.com"
+    }
+  ],
+  "autoload": {
+    "psr-4": {
+      "OmerKamcili\\Sadmin\\": "src/"
+    }
+  },
+  "require": {}
+}
