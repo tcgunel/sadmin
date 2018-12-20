@@ -13,5 +13,8 @@
       "OmerKamcili\\Sadmin\\": "src/"
     }
   },
-  "require": {}
+  "require": {
+    "php": "^7.1.3",
+    "laravel/framework": "5.7.*"
+  }
 }
