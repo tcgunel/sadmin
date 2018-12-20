@@ -3,6 +3,6 @@
         @if($icon)
             <i class="{{ $icon }}"></i>
         @endif
-        {{ $label }}
+        <span class="ml-2">{{ $label }}</span>
     </a>
 </li>
