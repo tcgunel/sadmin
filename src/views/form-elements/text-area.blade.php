@@ -1,5 +1,5 @@
 <textarea
-        id="{{ $row->id }}"
+        id="{{ $row->id ? $row->id : uniqid() }}"
         name="{{ $row->name }}"
         rows="{{ $row->row }}"
         class="form-control @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif"

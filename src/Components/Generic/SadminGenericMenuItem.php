@@ -50,7 +50,18 @@ class SadminGenericMenuItem implements SadminMenuItemInterface
             'label' => $this->label,
             'url'   => $this->url,
             'icon'  => $this->icon,
-        ])->render();
+        ]);
 
     }
+
+    /**
+     * @return string
+     * @throws \Throwable
+     */
+    public function __toString()
+    {
+        return $this->render();
+    }
+
+
 }

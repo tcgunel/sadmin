@@ -18,7 +18,7 @@
     <label class="sidebar-label">Navigation</label>
     <div class="sl-sideleft-menu">
         @foreach($sideMenu as $foo)
-            {!! $foo->render() !!}
+            {!! $foo !!}
         @endforeach
 
     </div>
@@ -42,7 +42,7 @@
                 <div class="dropdown-menu dropdown-menu-header wd-200">
                     <ul class="list-unstyled user-profile-nav">
                         @foreach($profileMenu as $foo)
-                            {!! $foo->render() !!}
+                            {!! $foo !!}
                         @endforeach
                     </ul>
                 </div>
@@ -63,16 +63,12 @@
 <script src="/assets/admin/lib/jquery-ui/jquery-ui.js"></script>
 <script src="/assets/admin/lib/perfect-scrollbar/js/perfect-scrollbar.jquery.js"></script>
 <script src="/assets/admin/lib/jquery.sparkline.bower/jquery.sparkline.min.js"></script>
-<script src="/assets/admin/lib/d3/d3.js"></script>
-<script src="/assets/admin/lib/rickshaw/rickshaw.min.js"></script>
 <script src="/assets/admin/lib/chart.js/Chart.js"></script>
 <script src="/assets/admin/lib/Flot/jquery.flot.js"></script>
 <script src="/assets/admin/lib/Flot/jquery.flot.pie.js"></script>
 <script src="/assets/admin/lib/Flot/jquery.flot.resize.js"></script>
 <script src="/assets/admin/lib/flot-spline/jquery.flot.spline.js"></script>
-
 <script src="/assets/admin/js/starlight.js"></script>
 <script src="/assets/admin/js/ResizeSensor.js"></script>
-<script src="/assets/admin/js/dashboard.js"></script>
 </body>
 </html>

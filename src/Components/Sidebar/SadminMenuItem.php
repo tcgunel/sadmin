@@ -46,6 +46,17 @@ class SadminMenuItem implements SadminMenuItemInterface
      */
     public function render(): string
     {
-        return view('menu.side-menu-item')->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])->render();
+        return view('menu.side-menu-item')->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon]);
     }
+
+    /**
+     * @return string
+     * @throws \Throwable
+     */
+    public function __toString()
+    {
+        return $this->render();
+    }
+
+
 }

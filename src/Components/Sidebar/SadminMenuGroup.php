@@ -75,4 +75,13 @@ class SadminMenuGroup implements SadminMenuItemInterface
 
     }
 
+    /**
+     * @return string
+     * @throws \Throwable
+     */
+    public function __toString()
+    {
+        return $this->render();
+    }
+
 }

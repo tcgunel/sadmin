@@ -1,4 +1,5 @@
-<input id="{{ $row->id }}"
+<input
+       id="{{ $row->id ? $row->id : uniqid() }}"
        name="{{ $row->name }}"
        type="{{ $row->type }}"
        class="form-control @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif"
