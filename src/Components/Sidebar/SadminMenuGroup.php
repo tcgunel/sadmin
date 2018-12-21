@@ -27,6 +27,11 @@ class SadminMenuGroup implements SadminMenuItemInterface
     public $items;
 
     /**
+     * @var
+     */
+    public $urls = [];
+
+    /**
      * SadminMenuGroup constructor.
      *
      * @param string $label
@@ -51,8 +56,8 @@ class SadminMenuGroup implements SadminMenuItemInterface
                 'label' => $this->label,
                 'icon'  => $this->icon,
                 'items' => $this->items,
-            ])
-            ->render();
+                'urls'  => $this->urls,
+            ]);
     }
 
     /**
@@ -66,6 +71,7 @@ class SadminMenuGroup implements SadminMenuItemInterface
         $item->label = $label;
         $item->url = $url;
         $this->items[] = $item;
+        array_push($this->urls, $url);
 
     }
 

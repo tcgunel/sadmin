@@ -1,4 +1,4 @@
-<a href="#" class="sl-menu-link" style="cursor: pointer;">
+<a href="#" class="sl-menu-link @if(in_array(URL::current(), $urls))show-sub @endif">
     <div class="sl-menu-item">
         <i class="menu-item-icon tx-22 {{ $icon }}"></i>
         <span class="menu-item-label">{{ $label }}</span>
