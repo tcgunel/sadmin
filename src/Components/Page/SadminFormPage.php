@@ -123,16 +123,17 @@ class SadminFormPage implements SadminPageInterface
 
         foreach ($this->form as $key => $form) {
 
+
             if (in_array('required', $magic)) {
 
-                $this->form[$key]->required = true;
+                $form->required = true;
 
             }
 
 
             if (in_array('placeholder', $magic)) {
 
-                $this->form[$key]->placeholder = _("Please enter $form->label");
+                $form->placeholder = _("Please enter $form->label");
 
             }
 

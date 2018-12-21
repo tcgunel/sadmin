@@ -5,6 +5,5 @@
         @else
             <span class="breadcrumb-item active">{{ $foo->label }}</span>
         @endif
-
     @endforeach
 </nav>

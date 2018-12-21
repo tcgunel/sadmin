@@ -20,6 +20,7 @@
         @foreach($sideMenu as $foo)
             {!! $foo->render() !!}
         @endforeach
+
     </div>
     <br>
 </div>

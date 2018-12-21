@@ -4,29 +4,25 @@ namespace OmerKamcili\Sadmin\Components\Form;
 
 
 use OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface;
-use OmerKamcili\Sadmin\SadminTextInputTypes;
 use Illuminate\Support\Facades\View;
 
-
 /**
- * Class SadminTextInput
+ * Class SadminTextArea
  *
- * @package OmerKamcili\Sadmin\components\form
+ * @package OmerKamcili\Sadmin\Components\Form
  */
-class SadminTextInput extends SadminFormElementInterface
+class SadminTextArea extends SadminFormElementInterface
 {
 
     /**
-     * @var
+     * @var int
      */
-    public $type = SadminTextInputTypes::TEXT;
-
+    public $row = 3;
 
     /**
      * @var string
      */
-    public $view = 'form-elements/text-input';
-
+    public $view = 'form-elements/text-area';
 
     /**
      * @return string

@@ -4,29 +4,20 @@ namespace OmerKamcili\Sadmin\Components\Form;
 
 
 use OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface;
-use OmerKamcili\Sadmin\SadminTextInputTypes;
 use Illuminate\Support\Facades\View;
 
-
 /**
- * Class SadminTextInput
+ * Class SadminSelectBox
  *
- * @package OmerKamcili\Sadmin\components\form
+ * @package OmerKamcili\Sadmin\Components\Form
  */
-class SadminTextInput extends SadminFormElementInterface
+class SadminSelectBox extends SadminFormElementInterface
 {
-
-    /**
-     * @var
-     */
-    public $type = SadminTextInputTypes::TEXT;
-
 
     /**
      * @var string
      */
-    public $view = 'form-elements/text-input';
-
+    public $view = 'form-elements/select-box';
 
     /**
      * @return string
@@ -37,5 +28,4 @@ class SadminTextInput extends SadminFormElementInterface
 
         return view($this->view);
     }
-
 }

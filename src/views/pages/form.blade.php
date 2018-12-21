@@ -26,7 +26,12 @@
                         @endif
                         <div class="form-container">
                             @foreach($page->getForm() as $element)
-                                {!! $element !!}
+                                <div class="row sadmin-input">
+                                    <label class="col-lg-3 col-md-4 form-control-label">{{ $element->label }}:</label>
+                                    <div class="col-lg-9 col-md-8 mg-t-10 mg-sm-t-0">
+                                        {!! $element !!}
+                                    </div>
+                                </div>
                             @endforeach
                         </div>
                         <div class="row mt-4">

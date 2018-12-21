@@ -40,6 +40,11 @@ abstract class SadminFormElementInterface
      */
     public $class;
 
+    /**
+     * @var
+     */
+    public $description;
+
 
     /**
      * @var mixed
@@ -51,17 +56,6 @@ abstract class SadminFormElementInterface
      * @var
      */
     public $view;
-
-    /**
-     * @var
-     */
-    public $nativeView;
-
-
-    /**
-     * @var
-     */
-    public $native;
 
 
     /**
@@ -78,10 +72,6 @@ abstract class SadminFormElementInterface
             }
         }
         View::share('row', $this);
-
-        if($this->native){
-            $this->view = $this->nativeView;
-        }
 
     }
 
