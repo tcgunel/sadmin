@@ -14,7 +14,6 @@ abstract class SadminBaseController extends BaseController implements SadminBase
         View::share('sideMenu', $this->sideBarMenu());
         View::share('profileMenu', $this->profilMenu());
 
-
     }
 
 }
