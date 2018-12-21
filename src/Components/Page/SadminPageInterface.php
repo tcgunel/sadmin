@@ -1,9 +1,9 @@
 <?php
 
-namespace OmerKamcili\Sadmin\views;
+namespace OmerKamcili\Sadmin\Components\Page;
 
 
-use OmerKamcili\Sadmin\components\generic\SadminBreadCrumb;
+use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
 
 /**
  * Interface SadminPageInterface

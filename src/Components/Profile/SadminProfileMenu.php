@@ -1,10 +1,10 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components;
+namespace OmerKamcili\Sadmin\Components\Profile;
 
 
 use ArrayIterator;
-use OmerKamcili\Sadmin\components\generic\SadminGenericMenuItem;
+use OmerKamcili\Sadmin\Components\Generic\SadminGenericMenuItem;
 use IteratorAggregate;
 
 /**

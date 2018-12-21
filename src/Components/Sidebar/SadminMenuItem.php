@@ -1,7 +1,9 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components;
+namespace OmerKamcili\Sadmin\Components\Sidebar;
 
+
+use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
 
 /**
  * Class SadminMenuItem

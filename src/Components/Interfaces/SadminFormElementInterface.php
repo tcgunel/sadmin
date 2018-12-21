@@ -1,6 +1,6 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components\interfaces;
+namespace OmerKamcili\Sadmin\Components\Interfaces;
 
 
 use Illuminate\Support\Facades\View;

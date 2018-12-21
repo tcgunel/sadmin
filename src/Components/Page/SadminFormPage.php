@@ -1,10 +1,9 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components\page;
+namespace OmerKamcili\Sadmin\Components\Page;
 
 use OmerKamcili\Sadmin\components\generic\SadminBreadCrumb;
 use OmerKamcili\Sadmin\components\interfaces\SadminFormElementInterface;
-use OmerKamcili\Sadmin\views\SadminPageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -90,7 +89,7 @@ class SadminFormPage implements SadminPageInterface
     /**
      * @return string
      */
-    public function __toString()
+    public function __toString(): string
     {
         return $this->render();
     }
@@ -106,6 +105,38 @@ class SadminFormPage implements SadminPageInterface
         View::share('page', $this);
 
         return view('pages/form');
+
+    }
+
+
+    /**
+     * @param array|string $magic
+     */
+    public function makeMagic($magic): void
+    {
+
+        if (is_string($magic)) {
+
+            $magic = explode('|', $magic);
+
+        }
+
+        foreach ($this->form as $key => $form) {
+
+            if (in_array('required', $magic)) {
+
+                $this->form[$key]->required = true;
+
+            }
+
+
+            if (in_array('placeholder', $magic)) {
+
+                $this->form[$key]->placeholder = _("Please enter $form->label");
+
+            }
+
+        }
 
     }
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components;
+namespace OmerKamcili\Sadmin\Components\Sidebar;
 
 
 use ArrayIterator;

@@ -1,9 +1,9 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components\generic;
+namespace OmerKamcili\Sadmin\Components\Generic;
 
 
-use OmerKamcili\Sadmin\components\SadminMenuItemInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
 
 /**
  * Class SadminGenericMenuItem

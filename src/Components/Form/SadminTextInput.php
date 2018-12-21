@@ -1,9 +1,9 @@
 <?php
 
-namespace OmerKamcili\Sadmin\components\form;
+namespace OmerKamcili\Sadmin\Components\Form;
 
 
-use OmerKamcili\Sadmin\components\interfaces\SadminFormElementInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface;
 use Illuminate\Support\Facades\View;
 
 

@@ -2,8 +2,8 @@
 
 namespace OmerKamcili\Sadmin;
 
-use OmerKamcili\Sadmin\components\SadminProfileMenu;
-use OmerKamcili\Sadmin\components\SadminSideMenu;
+use OmerKamcili\Sadmin\Components\Profile\SadminProfileMenu;
+use OmerKamcili\Sadmin\Components\Sidebar\SadminSideMenu;
 
 /**
  * Interface SadminBaseInterface
