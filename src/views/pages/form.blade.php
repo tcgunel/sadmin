@@ -1,6 +1,4 @@
 @extends('admin-layout')
-
-
 @section('page')
     {!! $page->getBreadCrumb() !!}
     <div class="sl-pagebody">

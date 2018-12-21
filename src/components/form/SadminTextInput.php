@@ -20,6 +20,18 @@ class SadminTextInput extends SadminFormElementInterface
      */
     public $type = 'text';
 
+
+    /**
+     * @var string
+     */
+    public $view = 'form-elements/text-input';
+
+    /**
+     * @var string
+     */
+    public $nativeView = 'native-elements/text-input';
+
+
     /**
      * SadminTextInput constructor.
      *
@@ -38,7 +50,7 @@ class SadminTextInput extends SadminFormElementInterface
     {
         View::share('row', $this);
 
-        return view('form-elements/text-input');
+        return view($this->view);
     }
 
 }

@@ -46,6 +46,24 @@ abstract class SadminFormElementInterface
      */
     public $required;
 
+
+    /**
+     * @var
+     */
+    public $view;
+
+    /**
+     * @var
+     */
+    public $nativeView;
+
+
+    /**
+     * @var
+     */
+    public $native;
+
+
     /**
      * SadminFormElementInterface constructor.
      *
@@ -60,6 +78,10 @@ abstract class SadminFormElementInterface
             }
         }
         View::share('row', $this);
+
+        if($this->native){
+            $this->view = $this->nativeView;
+        }
 
     }
 
