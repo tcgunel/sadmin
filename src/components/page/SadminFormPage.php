@@ -3,6 +3,7 @@
 namespace OmerKamcili\Sadmin\components\page;
 
 use OmerKamcili\Sadmin\components\generic\SadminBreadCrumb;
+use OmerKamcili\Sadmin\components\interfaces\SadminFormElementInterface;
 use OmerKamcili\Sadmin\views\SadminPageInterface;
 use Illuminate\Support\Facades\View;
 
@@ -17,24 +18,45 @@ class SadminFormPage implements SadminPageInterface
     /**
      * @var
      */
-    private $breadCrumb;
+    public $breadCrumb;
+
 
     /**
-     * @return string
+     * @var
      */
-    public function render(): string
-    {
+    public $form;
 
-        View::share('breadCrumb', $this->getBreadCrumb());
+    /**
+     * @var
+     */
+    public $title;
 
-        return view('pages/form');
+    /**
+     * @var
+     */
+    public $description;
 
-    }
+    /**
+     * @var
+     */
+    public $method = 'post';
+
+    /**
+     * @var
+     */
+    public $action;
+
+
+    /**
+     * @var
+     */
+    public $enctype;
+
 
     /**
      * @param SadminBreadCrumb $breadCrumb
      */
-    public function addBreadCrumb(SadminBreadCrumb $breadCrumb)
+    public function setBreadCrumb(SadminBreadCrumb $breadCrumb)
     {
         $this->breadCrumb = $breadCrumb;
     }
@@ -48,6 +70,24 @@ class SadminFormPage implements SadminPageInterface
     }
 
     /**
+     * @return mixed
+     */
+    public function getForm(): array
+    {
+        return $this->form;
+    }
+
+
+    /**
+     * @param SadminFormElementInterface $item
+     */
+    public function addFormItem(SadminFormElementInterface $item): void
+    {
+        $this->form[] = $item;
+    }
+
+
+    /**
      * @return string
      */
     public function __toString()
@@ -55,5 +95,18 @@ class SadminFormPage implements SadminPageInterface
         return $this->render();
     }
 
+
+    /**
+     * @return string
+     */
+    public function render(): string
+    {
+
+        View::share('breadCrumb', $this->getBreadCrumb());
+        View::share('page', $this);
+
+        return view('pages/form');
+
+    }
 
 }
