@@ -9,7 +9,6 @@
                 border-bottom: 1px solid #f1f1f1;
                 padding: 15px;
             }
-
             .form-container .sadmin-input:first-child {
                 border-top: 1px solid #f1f1f1;
             }
@@ -17,6 +16,7 @@
         <div class="row">
             <div class="col-xl-12 mg-t-25 mg-xl-t-0">
                 <form action="{{ $page->action }}" method="{{ $page->method }}" enctype="{{ $page->enctype }}"  data-parsley-validate>
+                    {{ csrf_field() }}
                     <div class="card pd-20 pd-sm-40 form-layout form-layout-4">
                         @if($page->title)
                             <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">{{ $page->title }}</h6>
@@ -26,7 +26,7 @@
                         @endif
                         <div class="form-container">
                             @foreach($page->getForm() as $element)
-                                <div class="row sadmin-input form-group">
+                                <div class="row sadmin-input">
                                     <label class="col-lg-3 col-md-4 form-control-label">{{ $element->label }}:</label>
                                     <div class="col-lg-9 col-md-8 mg-t-10 mg-sm-t-0">
                                         {!! $element !!}
