@@ -19,7 +19,6 @@ class SadminFormPage implements SadminPageInterface
      */
     public $breadCrumb;
 
-
     /**
      * @var
      */
@@ -51,7 +50,6 @@ class SadminFormPage implements SadminPageInterface
      */
     public $enctype;
 
-
     /**
      * @param SadminBreadCrumb $breadCrumb
      */
@@ -76,7 +74,6 @@ class SadminFormPage implements SadminPageInterface
         return $this->form;
     }
 
-
     /**
      * @param SadminFormElementInterface $item
      */
@@ -85,7 +82,6 @@ class SadminFormPage implements SadminPageInterface
         $this->form[] = $item;
     }
 
-
     /**
      * @return string
      */
@@ -93,7 +89,6 @@ class SadminFormPage implements SadminPageInterface
     {
         return $this->render();
     }
-
 
     /**
      * @return string
@@ -107,7 +102,6 @@ class SadminFormPage implements SadminPageInterface
         return view('pages/form');
 
     }
-
 
     /**
      * @param array|string $magic

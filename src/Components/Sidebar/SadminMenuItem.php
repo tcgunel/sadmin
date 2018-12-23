@@ -4,6 +4,7 @@ namespace OmerKamcili\Sadmin\Components\Sidebar;
 
 
 use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
+use Illuminate\Support\Facades\View;
 
 /**
  * Class SadminMenuItem
@@ -46,7 +47,10 @@ class SadminMenuItem implements SadminMenuItemInterface
      */
     public function render(): string
     {
-        return view('menu.side-menu-item')->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon]);
+
+        return View::make('menu.side-menu-item')
+            ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
+            ->render();
     }
 
     /**

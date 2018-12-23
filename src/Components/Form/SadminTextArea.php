@@ -27,11 +27,12 @@ class SadminTextArea extends SadminFormElementInterface
     /**
      * @return string
      */
-    function render(): string
+    public function render(): string
     {
         View::share('row', $this);
 
-        return view($this->view);
+        return View::make($this->view)->render();
+
     }
 
 }
