@@ -7,7 +7,7 @@
         value="{{ $row->value ? $row->value : (old($row->name) && $row->type != 'password' ? old($row->name) : '') }}"
         @if($row->required)required @endif>
 
-@if($errors->get($row->name))
+@if(isset($errors) && $errors->get($row->name))
     <small class="form-text text-danger">
         @foreach($errors->get($row->name) as $message)
             {{ $message }}

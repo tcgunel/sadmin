@@ -45,12 +45,10 @@ abstract class SadminFormElementInterface
      */
     public $description;
 
-
     /**
      * @var mixed
      */
     public $required;
-
 
     /**
      * @var
