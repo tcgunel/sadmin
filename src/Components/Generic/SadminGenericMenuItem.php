@@ -15,15 +15,15 @@ class SadminGenericMenuItem implements SadminMenuItemInterface
     /**
      * @var string
      */
-    private $label;
+    public $label;
     /**
      * @var string
      */
-    private $url;
+    public  $url;
     /**
      * @var string
      */
-    private $icon;
+    public  $icon;
 
     /**
      * SadminGenericMenuItem constructor.

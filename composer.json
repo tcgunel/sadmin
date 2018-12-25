@@ -15,7 +15,6 @@
   },
   "autoload-dev": {
     "psr-4": {
-      "Tests\\": "tests/",
       "OmerKamcili\\Sadmin\\Test\\": "tests/"
     }
   },
