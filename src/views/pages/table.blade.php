@@ -38,6 +38,9 @@
                     </tbody>
                 </table>
             </div>
+            @if($page->getPagination())
+                {!! $page->getPagination() !!}
+            @endif
         </div>
     </div>
 @endsection

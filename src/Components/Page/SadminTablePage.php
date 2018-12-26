@@ -52,6 +52,12 @@ class SadminTablePage implements SadminPageInterface
      */
     public $data = [];
 
+
+    /**
+     * @var
+     */
+    public $pagination;
+
     /**
      * @param mixed $breadCrumb
      */
@@ -120,6 +126,22 @@ class SadminTablePage implements SadminPageInterface
     public function setData(array $data): void
     {
         $this->data = $data;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getPagination()
+    {
+        return $this->pagination;
+    }
+
+    /**
+     * @param mixed $pagination
+     */
+    public function setPagination($pagination): void
+    {
+        $this->pagination = $pagination;
     }
 
 
