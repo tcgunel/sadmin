@@ -10,6 +10,7 @@ namespace OmerKamcili\Sadmin\Components\Page;
 
 
 use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
+use OmerKamcili\Sadmin\Components\Generic\SadminTableProgress;
 use OmerKamcili\Sadmin\Components\Interfaces\SadminPageInterface;
 use Illuminate\Support\Facades\View;
 
@@ -57,6 +58,12 @@ class SadminTablePage implements SadminPageInterface
      * @var
      */
     public $pagination;
+
+
+    /**
+     * @var
+     */
+    public $progress;
 
     /**
      * @param mixed $breadCrumb
@@ -142,6 +149,22 @@ class SadminTablePage implements SadminPageInterface
     public function setPagination($pagination): void
     {
         $this->pagination = $pagination;
+    }
+
+    /**
+     * @return mixed
+     */
+    public function getProgress(): SadminTableProgress
+    {
+        return $this->progress;
+    }
+
+    /**
+     * @param mixed $progress
+     */
+    public function setProgress($progress): void
+    {
+        $this->progress = $progress;
     }
 
 

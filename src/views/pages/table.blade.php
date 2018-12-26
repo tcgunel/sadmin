@@ -16,6 +16,10 @@
                         @foreach($page->getFields() as $key => $foo)
                             <th>{{ $foo }}</th>
                         @endforeach
+
+                        @if($page->getProgress())
+                            <th width="1">{{ __('Progress') }}</th>
+                        @endif
                     </tr>
                     </thead>
                     <tbody>
@@ -26,6 +30,9 @@
                                 @foreach($page->getFields() as $key => $bar)
                                     <td>{{ $foo->{$key} }}</td>
                                 @endforeach
+                                @if($page->getProgress())
+                                    <td style="display: flex;">{!! $page->getProgress()->render($foo)!!} </td>
+                                @endif
                             </tr>
                         @endforeach
                     @else
