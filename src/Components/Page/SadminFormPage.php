@@ -4,6 +4,7 @@ namespace OmerKamcili\Sadmin\Components\Page;
 
 use OmerKamcili\Sadmin\components\generic\SadminBreadCrumb;
 use OmerKamcili\Sadmin\components\interfaces\SadminFormElementInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\SadminPageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -49,6 +50,12 @@ class SadminFormPage implements SadminPageInterface
      * @var
      */
     public $enctype;
+
+
+    /**
+     * @var string
+     */
+    private $view = 'pages/form';
 
     /**
      * @param SadminBreadCrumb $breadCrumb
@@ -99,7 +106,7 @@ class SadminFormPage implements SadminPageInterface
         View::share('breadCrumb', $this->getBreadCrumb());
         View::share('page', $this);
 
-        return view('pages/form');
+        return View::make($this->view)->render();
 
     }
 
@@ -123,7 +130,6 @@ class SadminFormPage implements SadminPageInterface
                 $form->required = true;
 
             }
-
 
             if (in_array('placeholder', $magic)) {
 

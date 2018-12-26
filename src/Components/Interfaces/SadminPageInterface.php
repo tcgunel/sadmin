@@ -1,6 +1,6 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Page;
+namespace OmerKamcili\Sadmin\Components\Interfaces;
 
 
 use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
@@ -22,5 +22,10 @@ interface SadminPageInterface
      * @return SadminBreadCrumb
      */
     public function getBreadCrumb(): SadminBreadCrumb;
+
+    /**
+     * @return string
+     */
+    public function __toString(): string;
 
 }

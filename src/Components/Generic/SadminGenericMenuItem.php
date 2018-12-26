@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Generic;
 
-
 use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
 
 /**
