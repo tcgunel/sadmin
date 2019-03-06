@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\View;
  *
  * @package OmerKamcili\Sadmin\components\interfaces
  */
-abstract class SadminFormElementInterface
+abstract class FormElementInterface
 {
 
     /**

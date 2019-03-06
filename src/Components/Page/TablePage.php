@@ -1,27 +1,19 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: omerkamcili
- * Date: 25.12.2018
- * Time: 14:57
- */
 
 namespace OmerKamcili\Sadmin\Components\Page;
 
-
-use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
-use OmerKamcili\Sadmin\Components\Generic\SadminTableProgress;
-use OmerKamcili\Sadmin\Components\Interfaces\SadminPageInterface;
+use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
+use OmerKamcili\Sadmin\Components\Generic\TableProgress;
+use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
- * Class SadminTablePage
+ * Class TablePage
  *
  * @package OmerKamcili\Sadmin\Components\Page
  */
-class SadminTablePage implements SadminPageInterface
+class TablePage implements PageInterface
 {
-
 
     /**
      * @var
@@ -86,9 +78,9 @@ class SadminTablePage implements SadminPageInterface
     }
 
     /**
-     * @return SadminBreadCrumb
+     * @return BreadCrumb
      */
-    public function getBreadCrumb(): SadminBreadCrumb
+    public function getBreadCrumb(): BreadCrumb
     {
 
         return $this->breadCrumb;
@@ -152,9 +144,9 @@ class SadminTablePage implements SadminPageInterface
     }
 
     /**
-     * @return mixed
+     * @return TableProgress
      */
-    public function getProgress(): SadminTableProgress
+    public function getProgress(): TableProgress
     {
         return $this->progress;
     }

@@ -4,11 +4,11 @@ namespace OmerKamcili\Sadmin\Components\Interfaces;
 
 
 /**
- * Interface SadminMenuItemInterface
+ * Interface MenuItemInterface
  *
  * @package OmerKamcili\Sadmin\components
  */
-interface  SadminMenuItemInterface
+interface  MenuItemInterface
 {
     /**
      * @return string

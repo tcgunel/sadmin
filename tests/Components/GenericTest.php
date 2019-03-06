@@ -3,8 +3,8 @@
 namespace OmerKamcili\Sadmin\Test\Components;
 
 
-use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
-use OmerKamcili\Sadmin\Components\Generic\SadminGenericMenuItem;
+use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
+use OmerKamcili\Sadmin\Components\Generic\GenericMenuItem;
 use Tests\TestCase;
 
 /**
@@ -20,8 +20,8 @@ class GenericTest extends TestCase
     public function testBreadCrumb()
     {
 
-        $object = new SadminBreadCrumb();
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb', $object);
+        $object = new BreadCrumb();
+        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\BreadCrumb', $object);
         $object->addItem('foo', 'bar');
         $this->assertIsArray($object->items);
         $firstItem = reset($object->items);
@@ -36,9 +36,9 @@ class GenericTest extends TestCase
     public function testGenericMenuItem()
     {
 
-        $object = new SadminGenericMenuItem('foo','bar', 'icon');
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\SadminGenericMenuItem', $object);
-        $this->assertSame($object->label,'foo');
+        $object = new GenericMenuItem('foo', 'bar', 'icon');
+        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\GenericMenuItem', $object);
+        $this->assertSame($object->label, 'foo');
         $this->assertSame($object->url, 'bar');
         $this->assertSame($object->icon, 'icon');
 

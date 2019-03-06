@@ -3,15 +3,10 @@
 namespace OmerKamcili\Sadmin\Components\Form;
 
 
-use OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
 use Illuminate\Support\Facades\View;
 
-/**
- * Class SadminTextArea
- *
- * @package OmerKamcili\Sadmin\Components\Form
- */
-class SadminTextArea extends SadminFormElementInterface
+class TextArea extends FormElementInterface
 {
 
     /**
@@ -29,9 +24,8 @@ class SadminTextArea extends SadminFormElementInterface
      */
     public function render(): string
     {
-        View::share('row', $this);
 
-        return View::make($this->view)->render();
+        return View::make($this->view, ['row' => $this])->render();
 
     }
 

@@ -4,11 +4,11 @@ namespace OmerKamcili\Sadmin\Components\Interfaces;
 
 
 /**
- * Interface SadminPaginationInterface
+ * Interface PaginationInterface
  *
  * @package OmerKamcili\Sadmin\Components\Interfaces
  */
-interface SadminPaginationInterface
+interface PaginationInterface
 {
 
     /**

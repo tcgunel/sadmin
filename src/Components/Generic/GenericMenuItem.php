@@ -1,19 +1,11 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Sidebar;
+namespace OmerKamcili\Sadmin\Components\Generic;
 
+use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
 
-use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
-use Illuminate\Support\Facades\View;
-
-/**
- * Class SadminMenuItem
- *
- * @package OmerKamcili\Sadmin\components
- */
-class SadminMenuItem implements SadminMenuItemInterface
+class GenericMenuItem implements MenuItemInterface
 {
-
     /**
      * @var string
      */
@@ -28,13 +20,13 @@ class SadminMenuItem implements SadminMenuItemInterface
     public $icon;
 
     /**
-     * SadminMenuItem constructor.
+     * SadminGenericMenuItem constructor.
      *
      * @param string $label
      * @param string $url
      * @param string $icon
      */
-    public function __construct(string $label, string $url, string $icon = 'fa fa-angle-double-right')
+    public function __construct(string $label, string $url, string $icon = '')
     {
         $this->label = $label;
         $this->url = $url;
@@ -48,9 +40,12 @@ class SadminMenuItem implements SadminMenuItemInterface
     public function render(): string
     {
 
-        return View::make('menu.side-menu-item')
-            ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
-            ->render();
+        return view('menu.generic-bootstrap-li')->with([
+            'label' => $this->label,
+            'url'   => $this->url,
+            'icon'  => $this->icon,
+        ]);
+
     }
 
     /**

@@ -3,8 +3,8 @@
 namespace OmerKamcili\Sadmin\Components\Form;
 
 
-use OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface;
-use OmerKamcili\Sadmin\SadminTextInputTypes;
+use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
+use OmerKamcili\Sadmin\Constants\Form\TextInputTypes;
 use Illuminate\Support\Facades\View;
 
 
@@ -13,13 +13,13 @@ use Illuminate\Support\Facades\View;
  *
  * @package OmerKamcili\Sadmin\components\form
  */
-class SadminTextInput extends SadminFormElementInterface
+class TextInput extends FormElementInterface
 {
 
     /**
      * @var
      */
-    public $type = SadminTextInputTypes::TEXT;
+    public $type = TextInputTypes::TEXT;
 
 
     /**
@@ -33,9 +33,7 @@ class SadminTextInput extends SadminFormElementInterface
      */
     public function render(): string
     {
-        View::share('row', $this);
-
-        return View::make($this->view)->render();
+        return View::make($this->view, ['row' => $this])->render();
     }
 
 }

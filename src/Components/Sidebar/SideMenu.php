@@ -1,18 +1,16 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Profile;
-
+namespace OmerKamcili\Sadmin\Components\Sidebar;
 
 use ArrayIterator;
-use OmerKamcili\Sadmin\Components\Generic\SadminGenericMenuItem;
 use IteratorAggregate;
 
 /**
- * Class SadminProfileMenu
+ * Class SideMenu
  *
  * @package OmerKamcili\Sadmin\components
  */
-class SadminProfileMenu implements IteratorAggregate
+class SideMenu implements IteratorAggregate
 {
 
     /**
@@ -20,15 +18,22 @@ class SadminProfileMenu implements IteratorAggregate
      */
     private $items;
 
-
     /**
-     * @param SadminGenericMenuItem $item
+     * @param MenuItem $item
      */
-    public function add(SadminGenericMenuItem $item): void
+    public function add(MenuItem $item): void
     {
 
         $this->items[] = $item;
 
+    }
+
+    /**
+     * @param MenuGroup $group
+     */
+    public function addGroup(MenuGroup $group): void
+    {
+        $this->items[] = $group;
     }
 
     /**
@@ -41,12 +46,14 @@ class SadminProfileMenu implements IteratorAggregate
 
     }
 
+
     /**
-     * @return ArrayIterator|\Traversable
+     * @return ArrayIterator
      */
     public function getIterator(): ArrayIterator
     {
-        return new ArrayIterator($this->items);
-    }
 
+        return new ArrayIterator($this->items);
+
+    }
 }

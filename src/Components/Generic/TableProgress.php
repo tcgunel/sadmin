@@ -6,11 +6,11 @@ namespace OmerKamcili\Sadmin\Components\Generic;
 use Illuminate\Support\Facades\View;
 
 /**
- * Class SadminTableProgress
+ * Class TableProgress
  *
  * @package OmerKamcili\Sadmin\Components\Generic
  */
-class SadminTableProgress
+class TableProgress
 {
 
     /**

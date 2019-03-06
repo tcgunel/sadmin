@@ -2,15 +2,10 @@
 
 namespace OmerKamcili\Sadmin\Components\Generic\Paginations;
 
-use OmerKamcili\Sadmin\Components\Interfaces\SadminPaginationInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\PaginationInterface;
 use Illuminate\Support\Facades\View;
 
-/**
- * Class SadminCustomPagination
- *
- * @package OmerKamcili\Sadmin\Components\Generic\Paginations
- */
-class SadminCustomPagination implements SadminPaginationInterface
+class CustomPagination implements PaginationInterface
 {
 
     /**

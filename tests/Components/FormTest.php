@@ -2,10 +2,10 @@
 
 namespace OmerKamcili\Sadmin\Test\Components;
 
-use OmerKamcili\Sadmin\Components\Form\SadminSelectBox;
-use OmerKamcili\Sadmin\Components\Form\SadminTextArea;
-use OmerKamcili\Sadmin\Components\Form\SadminTextInput;
-use OmerKamcili\Sadmin\SadminTextInputTypes;
+use OmerKamcili\Sadmin\Components\Form\SelectBox;
+use OmerKamcili\Sadmin\Components\Form\TextArea;
+use OmerKamcili\Sadmin\Components\Form\TextInput;
+use OmerKamcili\Sadmin\Constants\Form\TextInputTypes;
 use Tests\TestCase;
 
 /**
@@ -37,9 +37,9 @@ class FormsComponentsTest extends TestCase
      */
     public function testTextInput()
     {
-        $object = new SadminTextInput($this->attr);
-        $object->type = SadminTextInputTypes::TEXT;
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface', $object);
+        $object = new TextInput($this->attr);
+        $object->type = TextInputTypes::TEXT;
+        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface', $object);
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);
         }
@@ -51,7 +51,7 @@ class FormsComponentsTest extends TestCase
     public function testSelectBox()
     {
 
-        $object = new SadminSelectBox($this->attr);
+        $object = new SelectBox($this->attr);
         $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface', $object);
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);
@@ -64,7 +64,7 @@ class FormsComponentsTest extends TestCase
      */
     public function testTextArea()
     {
-        $object = new SadminTextArea($this->attr);
+        $object = new TextArea($this->attr);
         $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface', $object);
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);

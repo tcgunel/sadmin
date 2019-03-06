@@ -3,14 +3,14 @@
 namespace OmerKamcili\Sadmin\Components\Interfaces;
 
 
-use OmerKamcili\Sadmin\Components\Generic\SadminBreadCrumb;
+use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
 
 /**
  * Interface SadminPageInterface
  *
  * @package OmerKamcili\Sadmin\views
  */
-interface SadminPageInterface
+interface PageInterface
 {
 
     /**
@@ -19,9 +19,9 @@ interface SadminPageInterface
     public function render(): string;
 
     /**
-     * @return SadminBreadCrumb
+     * @return BreadCrumb
      */
-    public function getBreadCrumb(): SadminBreadCrumb;
+    public function getBreadCrumb(): BreadCrumb;
 
     /**
      * @return string

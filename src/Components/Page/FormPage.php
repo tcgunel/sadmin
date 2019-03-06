@@ -2,9 +2,9 @@
 
 namespace OmerKamcili\Sadmin\Components\Page;
 
-use OmerKamcili\Sadmin\components\generic\SadminBreadCrumb;
-use OmerKamcili\Sadmin\components\interfaces\SadminFormElementInterface;
-use OmerKamcili\Sadmin\Components\Interfaces\SadminPageInterface;
+use OmerKamcili\Sadmin\components\generic\BreadCrumb;
+use OmerKamcili\Sadmin\components\interfaces\FormElementInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -12,7 +12,7 @@ use Illuminate\Support\Facades\View;
  *
  * @package OmerKamcili\Sadmin\components\page
  */
-class SadminFormPage implements SadminPageInterface
+class FormPage implements PageInterface
 {
 
     /**
@@ -58,17 +58,17 @@ class SadminFormPage implements SadminPageInterface
     private $view = 'pages/form';
 
     /**
-     * @param SadminBreadCrumb $breadCrumb
+     * @param BreadCrumb $breadCrumb
      */
-    public function setBreadCrumb(SadminBreadCrumb $breadCrumb)
+    public function setBreadCrumb(BreadCrumb $breadCrumb)
     {
         $this->breadCrumb = $breadCrumb;
     }
 
     /**
-     * @return SadminBreadCrumb
+     * @return BreadCrumb
      */
-    public function getBreadCrumb(): SadminBreadCrumb
+    public function getBreadCrumb(): BreadCrumb
     {
         return $this->breadCrumb;
     }
@@ -82,9 +82,9 @@ class SadminFormPage implements SadminPageInterface
     }
 
     /**
-     * @param SadminFormElementInterface $item
+     * @param FormElementInterface $item
      */
-    public function addFormItem(SadminFormElementInterface $item): void
+    public function addFormItem(FormElementInterface $item): void
     {
         $this->form[] = $item;
     }

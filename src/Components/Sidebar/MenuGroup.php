@@ -2,16 +2,16 @@
 
 namespace OmerKamcili\Sadmin\Components\Sidebar;
 
-use OmerKamcili\Sadmin\Components\Interfaces\SadminMenuItemInterface;
 use stdClass;
 use Illuminate\Support\Facades\View;
+use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
 
 /**
  * Class SadminMenuGroup
  *
  * @package OmerKamcili\Sadmin\components
  */
-class SadminMenuGroup implements SadminMenuItemInterface
+class MenuGroup implements MenuItemInterface
 {
 
     /**

@@ -1,9 +1,8 @@
 <?php
 
-namespace OmerKamcili\Sadmin;
+namespace OmerKamcili\Sadmin\Constants\Icons;
 
-
-class SadminIconFa
+class IconFa
 {
     // TODO: Getting here all icon fa items
     const ANCHOR = 'fa fa-anchor';

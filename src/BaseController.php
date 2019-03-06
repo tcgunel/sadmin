@@ -3,7 +3,7 @@
 namespace OmerKamcili\Sadmin;
 
 
-use Illuminate\Routing\Controller as BaseController;
+use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 
 /**
@@ -11,16 +11,16 @@ use Illuminate\Support\Facades\View;
  *
  * @package OmerKamcili\Sadmin
  */
-abstract class SadminBaseController extends BaseController implements SadminBaseInterface
+abstract class BaseController extends Controller implements BaseInterface
 {
     /**
-     * SadminBaseController constructor.
+     * BaseController constructor.
      */
     public function __construct()
     {
 
         View::share('sideMenu', $this->sideBarMenu());
-        View::share('profileMenu', $this->profilMenu());
+        View::share('profileMenu', $this->profileMenu());
 
     }
 

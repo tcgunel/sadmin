@@ -10,7 +10,7 @@ use stdClass;
  *
  * @package OmerKamcili\Sadmin\components\generic
  */
-class SadminBreadCrumb
+class BreadCrumb
 {
 
     /**
