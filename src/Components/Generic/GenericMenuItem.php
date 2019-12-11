@@ -34,9 +34,11 @@ class GenericMenuItem implements MenuItemInterface
      */
     public function __construct(string $label, string $url, string $icon = '')
     {
+
         $this->label = $label;
         $this->url = $url;
         $this->icon = $icon;
+
     }
 
     /**
@@ -60,7 +62,9 @@ class GenericMenuItem implements MenuItemInterface
      */
     public function __toString()
     {
+
         return $this->render();
+
     }
 
 
