@@ -116,7 +116,9 @@ class TablePage implements PageInterface
      */
     public function getData(): array
     {
+
         return $this->data;
+
     }
 
     /**
@@ -124,7 +126,9 @@ class TablePage implements PageInterface
      */
     public function setData(array $data): void
     {
+
         $this->data = $data;
+
     }
 
     /**
@@ -132,7 +136,9 @@ class TablePage implements PageInterface
      */
     public function getPagination()
     {
+
         return $this->pagination;
+
     }
 
     /**
@@ -140,7 +146,9 @@ class TablePage implements PageInterface
      */
     public function setPagination($pagination): void
     {
+
         $this->pagination = $pagination;
+
     }
 
     /**
@@ -148,7 +156,9 @@ class TablePage implements PageInterface
      */
     public function getProgress(): TableProgress
     {
+
         return $this->progress;
+
     }
 
     /**
@@ -156,8 +166,9 @@ class TablePage implements PageInterface
      */
     public function setProgress($progress): void
     {
-        $this->progress = $progress;
-    }
 
+        $this->progress = $progress;
+
+    }
 
 }

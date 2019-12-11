@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Interfaces;
 
-
 /**
  * Interface PaginationInterface
  *

@@ -2,10 +2,13 @@
 
 namespace OmerKamcili\Sadmin\Components\Form;
 
-
 use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
 use Illuminate\Support\Facades\View;
 
+/**
+ * Class TextArea
+ * @package OmerKamcili\Sadmin\Components\Form
+ */
 class TextArea extends FormElementInterface
 {
 

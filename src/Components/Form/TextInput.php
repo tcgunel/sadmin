@@ -2,11 +2,9 @@
 
 namespace OmerKamcili\Sadmin\Components\Form;
 
-
 use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
 use OmerKamcili\Sadmin\Constants\Form\TextInputTypes;
 use Illuminate\Support\Facades\View;
-
 
 /**
  * Class SadminTextInput

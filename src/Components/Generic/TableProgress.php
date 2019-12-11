@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Generic;
 
-
 use Illuminate\Support\Facades\View;
 
 /**
@@ -53,13 +52,17 @@ class TableProgress
     {
 
         $items = $this->getItems();
+
         foreach ($items as $key => $foo) {
 
             $url = $items[$key]['url'];
+
             foreach ($data as $dataKey => $dataValue) {
+
                 $url = str_replace('{'.$dataKey.'}', $dataValue, $url);
 
             }
+
             $items[$key]['url'] = $url;
 
         }

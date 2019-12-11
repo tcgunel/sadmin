@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Generic;
 
-
 use stdClass;
 
 /**
@@ -24,9 +23,10 @@ class BreadCrumb
      */
     public function addItem(string $label, string $url = ''): void
     {
-        $item = new stdClass();
-        $item->label = $label;
-        $item->url = $url;
+
+        $item          = new stdClass();
+        $item->label   = $label;
+        $item->url     = $url;
         $this->items[] = $item;
 
     }

@@ -17,14 +17,17 @@ abstract class FormElementInterface
      * @var
      */
     public $id;
+
     /**
      * @var
      */
     public $name;
+
     /**
      * @var
      */
     public $value;
+
     /**
      * @var
      */
@@ -55,7 +58,6 @@ abstract class FormElementInterface
      */
     public $view;
 
-
     /**
      * SadminFormElementInterface constructor.
      *
@@ -65,10 +67,14 @@ abstract class FormElementInterface
     {
 
         foreach ($properties as $key => $foo) {
+
             if (property_exists($this, $key)) {
+
                 $this->{$key} = $foo;
+
             }
         }
+
         View::share('row', $this);
 
     }

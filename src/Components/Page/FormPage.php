@@ -62,7 +62,9 @@ class FormPage implements PageInterface
      */
     public function setBreadCrumb(BreadCrumb $breadCrumb)
     {
+
         $this->breadCrumb = $breadCrumb;
+
     }
 
     /**
@@ -70,7 +72,9 @@ class FormPage implements PageInterface
      */
     public function getBreadCrumb(): BreadCrumb
     {
+
         return $this->breadCrumb;
+
     }
 
     /**
@@ -78,7 +82,9 @@ class FormPage implements PageInterface
      */
     public function getForm(): array
     {
+
         return $this->form;
+
     }
 
     /**
@@ -86,7 +92,9 @@ class FormPage implements PageInterface
      */
     public function addFormItem(FormElementInterface $item): void
     {
+
         $this->form[] = $item;
+
     }
 
     /**
@@ -94,7 +102,9 @@ class FormPage implements PageInterface
      */
     public function __toString(): string
     {
+
         return $this->render();
+
     }
 
     /**

@@ -4,16 +4,22 @@ namespace OmerKamcili\Sadmin\Components\Generic;
 
 use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
 
+/**
+ * Class GenericMenuItem
+ * @package OmerKamcili\Sadmin\Components\Generic
+ */
 class GenericMenuItem implements MenuItemInterface
 {
     /**
      * @var string
      */
     public $label;
+
     /**
      * @var string
      */
     public $url;
+
     /**
      * @var string
      */

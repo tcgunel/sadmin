@@ -17,10 +17,12 @@ class MenuItem implements MenuItemInterface
      * @var string
      */
     public $label;
+
     /**
      * @var string
      */
     public $url;
+
     /**
      * @var string
      */
@@ -35,9 +37,11 @@ class MenuItem implements MenuItemInterface
      */
     public function __construct(string $label, string $url, string $icon = 'fa fa-angle-double-right')
     {
+
         $this->label = $label;
-        $this->url = $url;
-        $this->icon = $icon;
+        $this->url   = $url;
+        $this->icon  = $icon;
+
     }
 
     /**
@@ -58,8 +62,9 @@ class MenuItem implements MenuItemInterface
      */
     public function __toString()
     {
-        return $this->render();
-    }
 
+        return $this->render();
+
+    }
 
 }

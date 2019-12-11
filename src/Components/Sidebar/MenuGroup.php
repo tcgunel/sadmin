@@ -18,10 +18,12 @@ class MenuGroup implements MenuItemInterface
      * @var string
      */
     public $label;
+
     /**
      * @var string
      */
     public $icon;
+
     /**
      * @var
      */
@@ -82,7 +84,9 @@ class MenuGroup implements MenuItemInterface
      */
     public function __toString()
     {
+
         return $this->render();
+
     }
 
 }

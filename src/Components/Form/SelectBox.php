@@ -6,6 +6,10 @@ namespace OmerKamcili\Sadmin\Components\Form;
 use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
 use Illuminate\Support\Facades\View;
 
+/**
+ * Class SelectBox
+ * @package OmerKamcili\Sadmin\Components\Form
+ */
 class SelectBox extends FormElementInterface
 {
 
