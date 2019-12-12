@@ -1,7 +1,12 @@
 @extends('admin-layout')
 @section('page')
+
     {!! $page->getBreadCrumb() !!}
+
     <div class="sl-pagebody">
+
+        @include('alerts/show-html-alerts')
+
         <div class="card pd-sm-40">
             @if($page->title)
                 <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">{{ $page->title }}</h6>
