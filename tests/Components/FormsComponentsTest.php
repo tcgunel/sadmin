@@ -19,27 +19,25 @@ class FormsComponentsTest extends TestCase
     /**
      * @var array
      */
-    private $attr
-        = [
-            'id'          => 'a',
-            'name'        => 'b',
-            'value'       => 'c',
-            'placeholder' => 'd',
-            'label'       => 'e',
-            'class'       => 'f',
-            'description' => 'g',
-            'required'    => 'h',
-
-        ];
+    private $attr = [
+        'id'          => 'a',
+        'name'        => 'b',
+        'value'       => 'c',
+        'placeholder' => 'd',
+        'label'       => 'e',
+        'class'       => 'f',
+        'description' => 'g',
+        'required'    => 'h',
+    ];
 
     /**
      * SadminTextInput
      */
     public function testTextInput()
     {
-        $object = new TextInput($this->attr);
+        $object       = new TextInput($this->attr);
         $object->type = TextInputTypes::TEXT;
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface', $object);
+
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);
         }
@@ -52,7 +50,7 @@ class FormsComponentsTest extends TestCase
     {
 
         $object = new SelectBox($this->attr);
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface', $object);
+
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);
         }
@@ -64,8 +62,9 @@ class FormsComponentsTest extends TestCase
      */
     public function testTextArea()
     {
+
         $object = new TextArea($this->attr);
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Interfaces\SadminFormElementInterface', $object);
+
         foreach ($this->attr as $key => $foo) {
             $this->assertSame($object->{$key}, $foo);
         }

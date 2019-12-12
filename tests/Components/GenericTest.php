@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Test\Components;
 
-
 use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
 use OmerKamcili\Sadmin\Components\Generic\GenericMenuItem;
 use Tests\TestCase;
