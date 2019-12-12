@@ -51,11 +51,15 @@ class TablePage implements PageInterface
      */
     public $pagination;
 
-
     /**
      * @var
      */
     public $progress;
+
+    /**
+     * @var array
+     */
+    public $formatter = [];
 
     /**
      * @param mixed $breadCrumb
@@ -70,6 +74,7 @@ class TablePage implements PageInterface
      */
     public function render(): string
     {
+
         View::share('breadCrumb', $this->getBreadCrumb());
         View::share('page', $this);
 
@@ -92,7 +97,9 @@ class TablePage implements PageInterface
      */
     public function __toString(): string
     {
+
         return $this->render();
+
     }
 
     /**
@@ -100,7 +107,9 @@ class TablePage implements PageInterface
      */
     public function getFields(): array
     {
+
         return $this->fields;
+
     }
 
     /**
@@ -108,7 +117,16 @@ class TablePage implements PageInterface
      */
     public function setFields(array $fields): void
     {
+
         $this->fields = $fields;
+
+    }
+
+    public function addFormatter($field, $function)
+    {
+
+        $this->formatter[$field] = $function;
+
     }
 
     /**

@@ -13,6 +13,7 @@ class IconFa
      *
      */
     const ANCHOR = 'fa fa-anchor';
+
     /**
      *
      */

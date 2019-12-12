@@ -33,7 +33,13 @@
                             <tr>
                                 @php($foo = (object) $foo)
                                 @foreach($page->getFields() as $key => $bar)
-                                    <td>{{ $foo->{$key} }}</td>
+                                    <td>
+                                        @if(isset($page->formatter[$key]))
+                                            {{ $page->formatter[$key]($foo->{$key}) }}
+                                        @else
+                                            {{ $foo->{$key} }}
+                                        @endif
+                                    </td>
                                 @endforeach
                                 @if($page->getProgress())
                                     <td style="display: flex;">{!! $page->getProgress()->render($foo)!!} </td>
