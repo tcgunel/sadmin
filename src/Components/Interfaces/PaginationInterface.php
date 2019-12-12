@@ -27,10 +27,8 @@ interface PaginationInterface
 
     /**
      * @return array[1 => 'url', 2 => 'url']
-     *
      */
     public function getPages(): array;
-
 
     /**
      * @return int

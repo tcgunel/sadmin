@@ -1,1 +1,34 @@
-select box
+<select
+        id="{{ $row->id ? $row->id : uniqid() }}"
+
+        class="form-control {{ $row->search ? 'select2-show-search' : 'select2' }}
+            @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
+            {{ $errors->get($row->name) ? ' is-invalid' : '' }}"
+
+        data-placeholder="{{ $row->placeholder }}"
+        @if($row->required)required @endif
+>
+    <option label="{{ $row->placeholder }}"></option>
+    @foreach($row->data as $key => $label)
+        <option label="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) == $key ? ' selected' : '') }}>{{ $label }}</option>
+    @endforeach
+
+</select>
+
+@if(isset($errors) && $errors->get($row->name))
+
+    <small class="form-text text-danger">
+
+        @foreach($errors->get($row->name) as $message)
+            {{ $message }}
+        @endforeach
+
+    </small>
+
+@elseif($row->description)
+
+    <small class="form-text text-info">
+        {{  $row->description }}
+    </small>
+
+@endif

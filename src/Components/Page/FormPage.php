@@ -137,13 +137,17 @@ class FormPage implements PageInterface
 
             if (in_array('required', $magic)) {
 
-                $form->required = true;
+                if ($form->required == null) {
+
+                    $form->required = true;
+
+                }
 
             }
 
             if (in_array('placeholder', $magic)) {
 
-                $form->placeholder = _("Please enter $form->label");
+                $form->placeholder = $form->placeholder == null ? _("Please enter $form->label") : $form->placeholder;
 
             }
 

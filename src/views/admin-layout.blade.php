@@ -8,6 +8,7 @@
     <link href="/assets/admin/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="/assets/admin/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="/assets/admin/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
+    <link href="/assets/admin/lib/select2/css/select2.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/admin/css/starlight.css">
 </head>
 
@@ -28,8 +29,10 @@
 <div class="sl-header">
 
     <div class="sl-header-left">
-        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a></div>
-        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a></div>
+        <div class="navicon-left hidden-md-down"><a id="btnLeftMenu" href=""><i class="icon ion-navicon-round"></i></a>
+        </div>
+        <div class="navicon-left hidden-lg-up"><a id="btnLeftMenuMobile" href=""><i class="icon ion-navicon-round"></i></a>
+        </div>
     </div>
 
     <div class="sl-header-right">
@@ -70,5 +73,15 @@
 <script src="/assets/admin/lib/flot-spline/jquery.flot.spline.js"></script>
 <script src="/assets/admin/js/starlight.js"></script>
 <script src="/assets/admin/js/ResizeSensor.js"></script>
+<script src="/assets/admin/lib/select2/js/select2.min.js"></script>
+
+<script>
+    $('.select2').select2({
+        minimumResultsForSearch: Infinity
+    });
+    $('.select2-show-search').select2({
+        minimumResultsForSearch: ''
+    });
+</script>
 </body>
 </html>

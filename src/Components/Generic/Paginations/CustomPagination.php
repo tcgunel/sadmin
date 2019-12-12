@@ -5,6 +5,10 @@ namespace OmerKamcili\Sadmin\Components\Generic\Paginations;
 use OmerKamcili\Sadmin\Components\Interfaces\PaginationInterface;
 use Illuminate\Support\Facades\View;
 
+/**
+ * Class CustomPagination
+ * @package OmerKamcili\Sadmin\Components\Generic\Paginations
+ */
 class CustomPagination implements PaginationInterface
 {
 
@@ -46,8 +50,8 @@ class CustomPagination implements PaginationInterface
     {
 
         return $this->nextPage;
-    }
 
+    }
 
     /**
      * @return string
@@ -56,6 +60,7 @@ class CustomPagination implements PaginationInterface
     {
 
         return $this->previousPage;
+
     }
 
     /**
@@ -63,7 +68,9 @@ class CustomPagination implements PaginationInterface
      */
     public function getPages(): array
     {
+
         return $this->pages;
+
     }
 
     /**
@@ -71,7 +78,9 @@ class CustomPagination implements PaginationInterface
      */
     public function setNextPage($nextPage): void
     {
+
         $this->nextPage = $nextPage;
+
     }
 
     /**
@@ -79,7 +88,9 @@ class CustomPagination implements PaginationInterface
      */
     public function setPreviousPage($previousPage): void
     {
+
         $this->previousPage = $previousPage;
+
     }
 
     /**
@@ -88,7 +99,9 @@ class CustomPagination implements PaginationInterface
      */
     public function setPages($pages): void
     {
+
         $this->pages = $pages;
+
     }
 
     /**
@@ -96,7 +109,9 @@ class CustomPagination implements PaginationInterface
      */
     public function getCurrentPage(): int
     {
+
         return $this->currentPage;
+
     }
 
     /**
@@ -104,7 +119,9 @@ class CustomPagination implements PaginationInterface
      */
     public function setCurrentPage($currentPage): void
     {
+
         $this->currentPage = $currentPage;
+
     }
 
     /**
@@ -112,7 +129,9 @@ class CustomPagination implements PaginationInterface
      */
     public function __toString(): string
     {
+
         return $this->render();
+
     }
 
 

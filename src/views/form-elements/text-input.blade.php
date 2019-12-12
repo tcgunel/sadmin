@@ -8,13 +8,19 @@
         @if($row->required)required @endif>
 
 @if(isset($errors) && $errors->get($row->name))
+
     <small class="form-text text-danger">
+
         @foreach($errors->get($row->name) as $message)
             {{ $message }}
         @endforeach
+
     </small>
+
 @elseif($row->description)
+
     <small class="form-text text-info">
         {{  $row->description }}
     </small>
+
 @endif

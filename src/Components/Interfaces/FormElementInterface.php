@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Interfaces;
 
-
 use Illuminate\Support\Facades\View;
 
 /**
@@ -31,7 +30,7 @@ abstract class FormElementInterface
     /**
      * @var
      */
-    public $placeholder;
+    public $placeholder = null;
 
     /**
      * @var
@@ -51,7 +50,7 @@ abstract class FormElementInterface
     /**
      * @var mixed
      */
-    public $required;
+    public $required = null;
 
     /**
      * @var

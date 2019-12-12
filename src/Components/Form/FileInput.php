@@ -6,31 +6,16 @@ use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
 use Illuminate\Support\Facades\View;
 
 /**
- * Class SelectBox
+ * Class FileInput
  * @package OmerKamcili\Sadmin\Components\Form
  */
-class SelectBox extends FormElementInterface
+class FileInput extends FormElementInterface
 {
 
     /**
      * @var string
      */
-    public $view = 'form-elements/select-box';
-
-    /**
-     * @var
-     */
-    public $selected;
-
-    /**
-     * @var array
-     */
-    public $data = [];
-
-    /**
-     * @var bool
-     */
-    public $search = false;
+    public $view = 'form-elements/file-input';
 
     /**
      * @return string
@@ -41,5 +26,4 @@ class SelectBox extends FormElementInterface
         return View::make($this->view, ['row' => $this])->render();
 
     }
-
 }
