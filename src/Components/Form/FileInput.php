@@ -13,6 +13,11 @@ class FileInput extends FormElementInterface
 {
 
     /**
+     * @var bool
+     */
+    public $multiple = false;
+
+    /**
      * @var string
      */
     public $view = 'form-elements/file-input';

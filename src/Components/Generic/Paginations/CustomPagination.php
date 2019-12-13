@@ -15,12 +15,12 @@ class CustomPagination implements PaginationInterface
     /**
      * @var
      */
-    public $nextPage;
+    public $nextPage = '';
 
     /**
      * @var
      */
-    public $previousPage;
+    public $previousPage = '';
 
     /**
      * @var
@@ -37,9 +37,11 @@ class CustomPagination implements PaginationInterface
      */
     public function render(): string
     {
+
         View::share('paginator', $this);
 
         return View::make('component/pagination')->render();
+
     }
 
 
