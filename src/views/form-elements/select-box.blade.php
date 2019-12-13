@@ -1,34 +1,43 @@
-<select
-        id="{{ $row->id ? $row->id : uniqid() }}"
+<div class="row sadmin-input">
+    <label class="col-lg-3 col-md-4 form-control-label">{{ $row->label }}:</label>
+    <div class="col-lg-9 col-md-8 mg-t-10 mg-sm-t-0">
+        <select
+                id="{{ $row->id ? $row->id : uniqid() }}"
+                class="form-control {{ $row->search ? 'select2-show-search' : 'select2' }}
+                @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
+                {{ $errors->get($row->name) ? ' is-invalid' : '' }}"
+                data-placeholder="{{ $row->placeholder }}"
+                @if($row->required)required @endif>
+            <option label="{{ $row->placeholder }}"></option>
+            @foreach($row->data as $key => $label)
+                <option label="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) == $key ? ' selected' : '') }}>{{ $label }}</option>
+            @endforeach
 
-        class="form-control {{ $row->search ? 'select2-show-search' : 'select2' }}
-            @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
-            {{ $errors->get($row->name) ? ' is-invalid' : '' }}"
+        </select>
 
-        data-placeholder="{{ $row->placeholder }}"
-        @if($row->required)required @endif
->
-    <option label="{{ $row->placeholder }}"></option>
-    @foreach($row->data as $key => $label)
-        <option label="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) == $key ? ' selected' : '') }}>{{ $label }}</option>
-    @endforeach
+        @if(isset($errors) && $errors->get($row->name))
 
-</select>
+            <small class="form-text text-danger">
 
-@if(isset($errors) && $errors->get($row->name))
+                @foreach($errors->get($row->name) as $message)
+                    {{ $message }}
+                @endforeach
 
-    <small class="form-text text-danger">
+            </small>
 
-        @foreach($errors->get($row->name) as $message)
-            {{ $message }}
-        @endforeach
+        @elseif($row->description)
 
-    </small>
+            <small class="form-text text-info">
+                {{  $row->description }}
+            </small>
 
-@elseif($row->description)
+        @endif
 
-    <small class="form-text text-info">
-        {{  $row->description }}
-    </small>
+    </div>
+</div>
 
-@endif
+
+
+
+
+
