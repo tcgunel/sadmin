@@ -20,6 +20,15 @@ class ProfileMenu implements IteratorAggregate
      */
     private $items;
 
+    /**
+     * @var
+     */
+    public $imageUrl;
+
+    /**
+     * @var
+     */
+    public $fullName;
 
     /**
      * @param GenericMenuItem $item

@@ -36,6 +36,7 @@ class BasicAlert
 
         $this->message = $message;
         $this->type    = $type;
+        $this->view    = config('sadmin.theme') . '/' . $this->view;
 
     }
 

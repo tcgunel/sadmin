@@ -51,11 +51,20 @@ class FormPage implements PageInterface
      */
     public $enctype;
 
-
     /**
      * @var string
      */
     private $view = 'pages/form';
+
+    /**
+     * FormPage constructor.
+     */
+    public function __construct()
+    {
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
 
     /**
      * @param BreadCrumb $breadCrumb

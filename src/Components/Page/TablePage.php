@@ -62,6 +62,16 @@ class TablePage implements PageInterface
     public $formatter = [];
 
     /**
+     * TablePage constructor.
+     */
+    public function __construct()
+    {
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
+
+    /**
      * @param mixed $breadCrumb
      */
     public function setBreadCrumb($breadCrumb): void
@@ -122,6 +132,10 @@ class TablePage implements PageInterface
 
     }
 
+    /**
+     * @param $field
+     * @param $function
+     */
     public function addFormatter($field, $function)
     {
 

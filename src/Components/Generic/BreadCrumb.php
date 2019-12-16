@@ -18,6 +18,21 @@ class BreadCrumb
     public $items;
 
     /**
+     * @var string
+     */
+    private $view = 'component/bread-crumb';
+
+    /**
+     * BreadCrumb constructor.
+     */
+    public function __construct()
+    {
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
+
+    /**
      * @param string $label
      * @param string $url
      */
@@ -37,7 +52,7 @@ class BreadCrumb
     public function render(): string
     {
 
-        return view('component/bread-crumb', ['breadCrumbs' => $this->items]);
+        return view($this->view, ['breadCrumbs' => $this->items]);
 
     }
 

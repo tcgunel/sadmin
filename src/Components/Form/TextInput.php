@@ -19,12 +19,24 @@ class TextInput extends FormElementInterface
      */
     public $type = TextInputTypes::TEXT;
 
-
     /**
      * @var string
      */
     public $view = 'form-elements/text-input';
 
+    /**
+     * TextInput constructor.
+     *
+     * @param array $properties
+     */
+    public function __construct(array $properties = [])
+    {
+
+        parent::__construct($properties);
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
 
     /**
      * @return string

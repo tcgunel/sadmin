@@ -18,6 +18,21 @@ class TableProgress
     public $items;
 
     /**
+     * @var string
+     */
+    private $view = 'component/table-buttons';
+
+    /**
+     * TableProgress constructor.
+     */
+    public function __construct()
+    {
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
+
+    /**
      * @param string $url
      * @param string $icon
      * @param string $colorType
@@ -59,7 +74,7 @@ class TableProgress
 
             foreach ($data as $dataKey => $dataValue) {
 
-                $url = str_replace('{'.$dataKey.'}', $dataValue, $url);
+                $url = str_replace('{' . $dataKey . '}', $dataValue, $url);
 
             }
 
@@ -67,7 +82,7 @@ class TableProgress
 
         }
 
-        return View::make('component/table-buttons', ['items' => $items])->render();
+        return View::make($this->view, ['items' => $items])->render();
 
     }
 

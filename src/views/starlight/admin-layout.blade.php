@@ -9,12 +9,12 @@
     <link href="/assets/admin/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="/assets/admin/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
     <link href="/assets/admin/lib/select2/css/select2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/admin/css/starlight.css">
+    <link rel="stylesheet" href="/assets/admin/css/theme.css">
 </head>
 
 <body>
 
-<div class="sl-logo"><a href=""><i class="icon ion-android-star-outline"></i> starlight</a></div>
+<div class="sl-logo"><a href="{{ config('sadmin.logo_url') }}">{{ config('sadmin.title') }}</a></div>
 <div class="sl-sideleft">
     <label class="sidebar-label">Navigation</label>
     <div class="sl-sideleft-menu">
@@ -39,8 +39,10 @@
         <nav class="nav">
             <div class="dropdown">
                 <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-                    <span class="logged-name">Jane<span class="hidden-md-down"> Doe</span></span>
-                    <img src="/assets/admin/img/img3.jpg" class="wd-32 rounded-circle" alt="">
+                    <span class="logged-name">{{ $profileMenu->fullName }}</span>
+                    @if($profileMenu->imageUrl)
+                        <img src="{{ $profileMenu->imageUrl }}" class="wd-32 rounded-circle">
+                    @endif
                 </a>
                 <div class="dropdown-menu dropdown-menu-header wd-200">
                     <ul class="list-unstyled user-profile-nav">
@@ -71,7 +73,7 @@
 <script src="/assets/admin/lib/Flot/jquery.flot.pie.js"></script>
 <script src="/assets/admin/lib/Flot/jquery.flot.resize.js"></script>
 <script src="/assets/admin/lib/flot-spline/jquery.flot.spline.js"></script>
-<script src="/assets/admin/js/starlight.js"></script>
+<script src="/assets/admin/js/admin.js"></script>
 <script src="/assets/admin/js/ResizeSensor.js"></script>
 <script src="/assets/admin/lib/select2/js/select2.min.js"></script>
 

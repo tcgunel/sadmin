@@ -35,6 +35,11 @@ class MenuGroup implements MenuItemInterface
     public $urls = [];
 
     /**
+     * @var string
+     */
+    private $view = 'menu.side-menu-group';
+
+    /**
      * SadminMenuGroup constructor.
      *
      * @param string $label
@@ -44,7 +49,8 @@ class MenuGroup implements MenuItemInterface
     {
 
         $this->label = $label;
-        $this->icon = $icon;
+        $this->icon  = $icon;
+        $this->view  = config('sadmin.theme') . '/' . $this->view;
 
     }
 
@@ -54,7 +60,7 @@ class MenuGroup implements MenuItemInterface
      */
     public function render(): string
     {
-        return View::make('menu.side-menu-group')
+        return View::make($this->view)
             ->with([
                 'label' => $this->label,
                 'icon'  => $this->icon,
@@ -70,9 +76,9 @@ class MenuGroup implements MenuItemInterface
     public function add($label, $url): void
     {
 
-        $item = new Stdclass();
-        $item->label = $label;
-        $item->url = $url;
+        $item          = new Stdclass();
+        $item->label   = $label;
+        $item->url     = $url;
         $this->items[] = $item;
         array_push($this->urls, $url);
 

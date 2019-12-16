@@ -23,6 +23,20 @@ class TextArea extends FormElementInterface
     public $view = 'form-elements/text-area';
 
     /**
+     * TextArea constructor.
+     *
+     * @param array $properties
+     */
+    public function __construct(array $properties = [])
+    {
+
+        parent::__construct($properties);
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
+
+    /**
      * @return string
      */
     public function render(): string

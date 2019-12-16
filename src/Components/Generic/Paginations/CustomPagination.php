@@ -33,6 +33,21 @@ class CustomPagination implements PaginationInterface
     public $currentPage;
 
     /**
+     * @var string
+     */
+    private $view = 'component/pagination';
+
+    /**
+     * CustomPagination constructor.
+     */
+    public function __construct()
+    {
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
+    }
+
+    /**
      * @return string
      */
     public function render(): string
@@ -40,10 +55,9 @@ class CustomPagination implements PaginationInterface
 
         View::share('paginator', $this);
 
-        return View::make('component/pagination')->render();
+        return View::make($this->view)->render();
 
     }
-
 
     /**
      * @return string

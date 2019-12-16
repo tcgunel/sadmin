@@ -26,6 +26,11 @@ class GenericMenuItem implements MenuItemInterface
     public $icon;
 
     /**
+     * @var string
+     */
+    private $view = 'menu.generic-bootstrap-li';
+
+    /**
      * SadminGenericMenuItem constructor.
      *
      * @param string $label
@@ -36,8 +41,9 @@ class GenericMenuItem implements MenuItemInterface
     {
 
         $this->label = $label;
-        $this->url = $url;
-        $this->icon = $icon;
+        $this->url   = $url;
+        $this->icon  = $icon;
+        $this->view  = config('sadmin.theme') . '/' . $this->view;
 
     }
 
@@ -48,7 +54,7 @@ class GenericMenuItem implements MenuItemInterface
     public function render(): string
     {
 
-        return view('menu.generic-bootstrap-li')->with([
+        return view($this->view)->with([
             'label' => $this->label,
             'url'   => $this->url,
             'icon'  => $this->icon,
@@ -66,6 +72,5 @@ class GenericMenuItem implements MenuItemInterface
         return $this->render();
 
     }
-
 
 }

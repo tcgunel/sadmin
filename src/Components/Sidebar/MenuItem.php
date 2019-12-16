@@ -28,6 +28,8 @@ class MenuItem implements MenuItemInterface
      */
     public $icon;
 
+    private $view = 'menu.side-menu-item';
+
     /**
      * MenuItem constructor.
      *
@@ -41,6 +43,7 @@ class MenuItem implements MenuItemInterface
         $this->label = $label;
         $this->url   = $url;
         $this->icon  = $icon;
+        $this->view  = config('sadmin.theme') . '/' . $this->view;
 
     }
 
@@ -51,7 +54,7 @@ class MenuItem implements MenuItemInterface
     public function render(): string
     {
 
-        return View::make('menu.side-menu-item')
+        return View::make($this->view)
             ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
             ->render();
     }
