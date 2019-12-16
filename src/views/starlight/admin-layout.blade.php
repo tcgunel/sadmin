@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <title>Admin</title>
+    <title>{{ config('sadmin.title') }}</title>
     <link href="/assets/admin/lib/font-awesome/css/font-awesome.css" rel="stylesheet">
     <link href="/assets/admin/lib/Ionicons/css/ionicons.css" rel="stylesheet">
     <link href="/assets/admin/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
