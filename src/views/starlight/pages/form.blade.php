@@ -14,6 +14,9 @@
                 border-top: 1px solid #f1f1f1;
             }
         </style>
+
+        @include('starlight/alerts/html-alerts', ['alerts' => $page->getBasicAlerts()])
+
         <div class="row">
             <div class="col-xl-12 mg-t-25 mg-xl-t-0">
                 <form action="{{ $page->action }}" method="{{ $page->method }}" enctype="{{ $page->enctype }}"

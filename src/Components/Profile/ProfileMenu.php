@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Profile;
 
-
 use ArrayIterator;
 use OmerKamcili\Sadmin\Components\Generic\GenericMenuItem;
 use IteratorAggregate;
@@ -43,7 +42,7 @@ class ProfileMenu implements IteratorAggregate
     /**
      * @return array
      */
-    public function getAll(): array
+    public function getAll()
     {
 
         return new $this->items;

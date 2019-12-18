@@ -2,6 +2,8 @@
 
 namespace OmerKamcili\Sadmin\Components\Interfaces;
 
+use OmerKamcili\Sadmin\Components\Alert\BasicAlert;
+
 /**
  * Trait AddableBasicAlert
  * @package OmerKamcili\Sadmin\Components\Interfaces
@@ -17,7 +19,7 @@ trait AddableBasicAlert
     /**
      * @param BasicAlert $alert
      */
-    public function addBasicMessage(BasicAlert $alert)
+    public function addBasicAlert(BasicAlert $alert)
     {
         array_push($this->basicAlerts, $alert);
     }

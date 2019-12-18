@@ -2,6 +2,7 @@
 
 namespace OmerKamcili\Sadmin\Components\Generic;
 
+use Illuminate\Support\Facades\View;
 use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
 
 /**
@@ -53,12 +54,10 @@ class GenericMenuItem implements MenuItemInterface
      */
     public function render()
     {
-        // TODO: Change with static View::make method
-        return view($this->view)->with([
-            'label' => $this->label,
-            'url'   => $this->url,
-            'icon'  => $this->icon,
-        ]);
+
+        return View::make($this->view)
+            ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
+            ->render();
 
     }
 

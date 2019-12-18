@@ -67,7 +67,7 @@ class MenuItem implements MenuItemInterface
      * @return string
      * @throws \Throwable
      */
-    public function __toString()
+    public function __toString(): string
     {
 
         return $this->render();
