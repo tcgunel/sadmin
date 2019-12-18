@@ -56,9 +56,7 @@
                     </tbody>
                 </table>
             </div>
-            @if($page->getPagination())
-                {!! $page->getPagination() !!}
-            @endif
+            {!! $page->getPagination() !!}
         </div>
     </div>
 @endsection

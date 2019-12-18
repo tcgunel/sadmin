@@ -36,7 +36,7 @@ class BreadCrumb
      * @param string $label
      * @param string $url
      */
-    public function addItem(string $label, string $url = ''): void
+    public function addItem(string $label, string $url = '')
     {
 
         $item          = new stdClass();
@@ -49,10 +49,10 @@ class BreadCrumb
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
 
-        return view($this->view, ['breadCrumbs' => $this->items]);
+        return View::make($this->view, ['breadCrumbs' => $this->items]);
 
     }
 

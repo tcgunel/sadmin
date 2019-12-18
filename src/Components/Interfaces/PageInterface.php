@@ -15,16 +15,21 @@ interface PageInterface
     /**
      * @return string
      */
-    public function render(): string;
+    public function render();
 
     /**
-     * @return BreadCrumb
+     * @return BreadCrumb|null
      */
-    public function getBreadCrumb(): BreadCrumb;
+    public function getBreadCrumb();
 
     /**
-     * @return string
+     * @return array|null
      */
-    public function __toString(): string;
+    public function getBasicAlerts();
+
+    /**
+     * @return string|null
+     */
+    public function __toString();
 
 }

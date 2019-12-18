@@ -21,7 +21,7 @@ class SideMenu implements IteratorAggregate
     /**
      * @param MenuItem $item
      */
-    public function add(MenuItem $item): void
+    public function add(MenuItem $item)
     {
 
         $this->items[] = $item;
@@ -31,7 +31,7 @@ class SideMenu implements IteratorAggregate
     /**
      * @param MenuGroup $group
      */
-    public function addGroup(MenuGroup $group): void
+    public function addGroup(MenuGroup $group)
     {
         $this->items[] = $group;
     }
@@ -50,7 +50,7 @@ class SideMenu implements IteratorAggregate
     /**
      * @return ArrayIterator
      */
-    public function getIterator(): ArrayIterator
+    public function getIterator()
     {
 
         return new ArrayIterator($this->items);

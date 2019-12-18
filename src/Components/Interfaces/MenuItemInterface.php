@@ -12,6 +12,6 @@ interface  MenuItemInterface
     /**
      * @return string
      */
-    public function render(): string;
+    public function render();
 
 }

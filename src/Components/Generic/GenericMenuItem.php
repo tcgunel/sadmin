@@ -31,7 +31,7 @@ class GenericMenuItem implements MenuItemInterface
     private $view = 'menu.generic-bootstrap-li';
 
     /**
-     * SadminGenericMenuItem constructor.
+     * GenericMenuItem constructor.
      *
      * @param string $label
      * @param string $url
@@ -51,9 +51,9 @@ class GenericMenuItem implements MenuItemInterface
      * @return string
      * @throws \Throwable
      */
-    public function render(): string
+    public function render()
     {
-
+        // TODO: Change with static View::make method
         return view($this->view)->with([
             'label' => $this->label,
             'url'   => $this->url,

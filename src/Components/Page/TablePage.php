@@ -4,6 +4,7 @@ namespace OmerKamcili\Sadmin\Components\Page;
 
 use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
 use OmerKamcili\Sadmin\Components\Generic\TableProgress;
+use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
 use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\View;
  */
 class TablePage implements PageInterface
 {
+
+    use AddableBasicAlert;
 
     /**
      * @var
@@ -45,7 +48,6 @@ class TablePage implements PageInterface
      */
     public $data = [];
 
-
     /**
      * @var
      */
@@ -74,7 +76,7 @@ class TablePage implements PageInterface
     /**
      * @param mixed $breadCrumb
      */
-    public function setBreadCrumb($breadCrumb): void
+    public function setBreadCrumb($breadCrumb)
     {
         $this->breadCrumb = $breadCrumb;
     }
@@ -82,7 +84,7 @@ class TablePage implements PageInterface
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
 
         View::share('breadCrumb', $this->getBreadCrumb());
@@ -95,7 +97,7 @@ class TablePage implements PageInterface
     /**
      * @return BreadCrumb
      */
-    public function getBreadCrumb(): BreadCrumb
+    public function getBreadCrumb()
     {
 
         return $this->breadCrumb;
@@ -156,7 +158,7 @@ class TablePage implements PageInterface
     /**
      * @param array $data
      */
-    public function setData(array $data): void
+    public function setData(array $data)
     {
 
         $this->data = $data;
@@ -176,7 +178,7 @@ class TablePage implements PageInterface
     /**
      * @param mixed $pagination
      */
-    public function setPagination($pagination): void
+    public function setPagination($pagination)
     {
 
         $this->pagination = $pagination;
@@ -184,9 +186,9 @@ class TablePage implements PageInterface
     }
 
     /**
-     * @return TableProgress
+     * @return TableProgress|null
      */
-    public function getProgress(): TableProgress
+    public function getProgress()
     {
 
         return $this->progress;
@@ -196,7 +198,7 @@ class TablePage implements PageInterface
     /**
      * @param mixed $progress
      */
-    public function setProgress($progress): void
+    public function setProgress($progress)
     {
 
         $this->progress = $progress;

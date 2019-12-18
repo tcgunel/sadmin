@@ -82,7 +82,7 @@ abstract class FormElementInterface
      * @return string
      */
 
-    abstract function render(): string;
+    abstract function render();
 
     /**
      * @return mixed
@@ -95,7 +95,7 @@ abstract class FormElementInterface
     /**
      * @param mixed $id
      */
-    public function setId($id): void
+    public function setId($id)
     {
         $this->id = $id;
     }
@@ -111,7 +111,7 @@ abstract class FormElementInterface
     /**
      * @param mixed $name
      */
-    public function setName($name): void
+    public function setName($name)
     {
         $this->name = $name;
     }
@@ -127,7 +127,7 @@ abstract class FormElementInterface
     /**
      * @param mixed $value
      */
-    public function setValue($value): void
+    public function setValue($value)
     {
         $this->value = $value;
     }
@@ -143,7 +143,7 @@ abstract class FormElementInterface
     /**
      * @param mixed $placeholder
      */
-    public function setPlaceholder($placeholder): void
+    public function setPlaceholder($placeholder)
     {
         $this->placeholder = $placeholder;
     }

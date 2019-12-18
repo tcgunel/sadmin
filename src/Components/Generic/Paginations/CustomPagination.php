@@ -50,7 +50,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
 
         View::share('paginator', $this);
@@ -62,7 +62,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return string
      */
-    public function getNextPage(): string
+    public function getNextPage()
     {
 
         return $this->nextPage;
@@ -72,7 +72,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return string
      */
-    public function getPreviousPage(): string
+    public function getPreviousPage()
     {
 
         return $this->previousPage;
@@ -82,7 +82,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return array
      */
-    public function getPages(): array
+    public function getPages()
     {
 
         return $this->pages;
@@ -92,7 +92,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @param mixed $nextPage = ['label' => 'string', 'url' => 'string']
      */
-    public function setNextPage($nextPage): void
+    public function setNextPage($nextPage)
     {
 
         $this->nextPage = $nextPage;
@@ -102,7 +102,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @param mixed $previousPage = ['label' => 'string', 'url' => 'string']
      */
-    public function setPreviousPage($previousPage): void
+    public function setPreviousPage($previousPage)
     {
 
         $this->previousPage = $previousPage;
@@ -113,7 +113,7 @@ class CustomPagination implements PaginationInterface
      * @param mixed $pages = array[1 => 'url', 2 => 'url']
      *
      */
-    public function setPages($pages): void
+    public function setPages($pages)
     {
 
         $this->pages = $pages;
@@ -123,7 +123,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return int
      */
-    public function getCurrentPage(): int
+    public function getCurrentPage()
     {
 
         return $this->currentPage;
@@ -133,7 +133,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @param mixed $currentPage
      */
-    public function setCurrentPage($currentPage): void
+    public function setCurrentPage($currentPage)
     {
 
         $this->currentPage = $currentPage;
@@ -143,7 +143,7 @@ class CustomPagination implements PaginationInterface
     /**
      * @return string
      */
-    public function __toString(): string
+    public function __toString()
     {
 
         return $this->render();

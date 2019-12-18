@@ -38,7 +38,7 @@ class TableProgress
      * @param string $colorType
      * @param string $class
      */
-    public function addItem(string $url, string $icon, string $colorType, string $class = ''): void
+    public function addItem(string $url, string $icon, string $colorType, string $class = '')
     {
 
         $this->items[] = [
@@ -53,7 +53,7 @@ class TableProgress
     /**
      * @return mixed
      */
-    public function getItems(): array
+    public function getItems()
     {
         return $this->items;
     }
@@ -63,7 +63,7 @@ class TableProgress
      *
      * @return string
      */
-    public function render($data = null): string
+    public function render($data = null)
     {
 
         $items = $this->getItems();

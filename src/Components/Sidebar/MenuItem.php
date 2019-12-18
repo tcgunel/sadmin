@@ -28,7 +28,11 @@ class MenuItem implements MenuItemInterface
      */
     public $icon;
 
+    /**
+     * @var string
+     */
     private $view = 'menu.side-menu-item';
+
 
     /**
      * MenuItem constructor.
@@ -51,7 +55,7 @@ class MenuItem implements MenuItemInterface
      * @return string
      * @throws \Throwable
      */
-    public function render(): string
+    public function render()
     {
 
         return View::make($this->view)

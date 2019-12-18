@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin;
 
-
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
 

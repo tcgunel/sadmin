@@ -36,11 +36,10 @@ class FileInput extends FormElementInterface
 
     }
 
-
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
 
         return View::make($this->view, ['row' => $this])->render();

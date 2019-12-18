@@ -33,7 +33,7 @@ class ProfileMenu implements IteratorAggregate
     /**
      * @param GenericMenuItem $item
      */
-    public function add(GenericMenuItem $item): void
+    public function add(GenericMenuItem $item)
     {
 
         $this->items[] = $item;
@@ -53,7 +53,7 @@ class ProfileMenu implements IteratorAggregate
     /**
      * @return ArrayIterator|\Traversable
      */
-    public function getIterator(): ArrayIterator
+    public function getIterator()
     {
         return new ArrayIterator($this->items);
     }

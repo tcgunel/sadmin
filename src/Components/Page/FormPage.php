@@ -4,6 +4,7 @@ namespace OmerKamcili\Sadmin\Components\Page;
 
 use OmerKamcili\Sadmin\components\generic\BreadCrumb;
 use OmerKamcili\Sadmin\components\interfaces\FormElementInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
 use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
@@ -14,6 +15,8 @@ use Illuminate\Support\Facades\View;
  */
 class FormPage implements PageInterface
 {
+
+    use AddableBasicAlert;
 
     /**
      * @var
@@ -45,11 +48,15 @@ class FormPage implements PageInterface
      */
     public $action;
 
-
     /**
      * @var
      */
     public $enctype;
+
+    /**
+     * @var array
+     */
+    public $basicAlerts = [];
 
     /**
      * @var string
@@ -77,9 +84,9 @@ class FormPage implements PageInterface
     }
 
     /**
-     * @return BreadCrumb
+     * @return BreadCrumb|null
      */
-    public function getBreadCrumb(): BreadCrumb
+    public function getBreadCrumb()
     {
 
         return $this->breadCrumb;
@@ -99,7 +106,7 @@ class FormPage implements PageInterface
     /**
      * @param FormElementInterface $item
      */
-    public function addFormItem(FormElementInterface $item): void
+    public function addFormItem(FormElementInterface $item)
     {
 
         $this->form[] = $item;
@@ -109,7 +116,7 @@ class FormPage implements PageInterface
     /**
      * @return string
      */
-    public function __toString(): string
+    public function __toString()
     {
 
         return $this->render();
@@ -119,7 +126,7 @@ class FormPage implements PageInterface
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
 
         View::share('breadCrumb', $this->getBreadCrumb());
@@ -132,7 +139,7 @@ class FormPage implements PageInterface
     /**
      * @param array|string $magic
      */
-    public function makeMagic($magic): void
+    public function makeMagic($magic)
     {
 
         if (is_string($magic)) {
@@ -163,5 +170,4 @@ class FormPage implements PageInterface
         }
 
     }
-
 }

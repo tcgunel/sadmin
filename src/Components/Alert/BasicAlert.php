@@ -26,10 +26,10 @@ class BasicAlert
     public $view = 'alerts/html-alert';
 
     /**
-     * FormAlert constructor.
+     * BasicAlert constructor.
      *
-     * @param string|null $message
-     * @param string|null $type
+     * @param string $message
+     * @param string $type
      */
     public function __construct(string $message, string $type = BasicAlertTypes::SUCCESS)
     {
@@ -43,7 +43,7 @@ class BasicAlert
     /**
      * @return string
      */
-    public function render(): string
+    public function render()
     {
         return View::make($this->view, ['type' => $this->type, 'message' => $this->message])->render();
     }

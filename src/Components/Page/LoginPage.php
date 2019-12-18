@@ -5,6 +5,7 @@ namespace OmerKamcili\Sadmin\Components\Page;
 use Illuminate\Support\Facades\View;
 use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
 use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
+use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
 
 /**
  * Class LoginPage
@@ -12,6 +13,8 @@ use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
  */
 class LoginPage implements PageInterface
 {
+
+    use AddableBasicAlert;
 
     /**
      * @var string
@@ -76,4 +79,5 @@ class LoginPage implements PageInterface
     {
         return $this->render();
     }
+
 }

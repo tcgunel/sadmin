@@ -40,7 +40,7 @@ class MenuGroup implements MenuItemInterface
     private $view = 'menu.side-menu-group';
 
     /**
-     * SadminMenuGroup constructor.
+     * MenuGroup constructor.
      *
      * @param string $label
      * @param string $icon
@@ -58,7 +58,7 @@ class MenuGroup implements MenuItemInterface
      * @return string
      * @throws \Throwable
      */
-    public function render(): string
+    public function render()
     {
         return View::make($this->view)
             ->with([
@@ -73,7 +73,7 @@ class MenuGroup implements MenuItemInterface
      * @param $label
      * @param $url
      */
-    public function add($label, $url): void
+    public function add($label, $url)
     {
 
         $item          = new Stdclass();
