@@ -53,7 +53,7 @@ class BreadCrumb
     public function render()
     {
 
-        return View::make($this->view, ['breadCrumbs' => $this->items]);
+        return View::make($this->view, ['breadCrumbs' => $this->items])->render();
 
     }
 
