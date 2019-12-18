@@ -3,6 +3,7 @@
 namespace OmerKamcili\Sadmin\Components\Generic;
 
 use stdClass;
+use Illuminate\Support\Facades\View;
 
 /**
  * Class SadminBreadCrumb
