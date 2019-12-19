@@ -2,7 +2,6 @@
 
 namespace OmerKamcili\Sadmin\Components\Sidebar;
 
-use stdClass;
 use Illuminate\Support\Facades\View;
 use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
 
@@ -11,87 +10,76 @@ use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
  *
  * @package OmerKamcili\Sadmin\components
  */
-class MenuGroup implements MenuItemInterface
+class MenuGroup extends MenuItemInterface
 {
-
-    /**
-     * @var string
-     */
-    public $label;
-
-    /**
-     * @var string
-     */
-    public $icon;
-
     /**
      * @var
      */
-    public $items;
-
+    public $items = [];
     /**
      * @var
      */
     public $urls = [];
+    /**
+     * @var array
+     */
+    public $itemProperties = [
+        'id'    => '',
+        'label' => '',
+        'url'   => '#',
+    ];
+
+    public $icon = 'fa fa-angle-double-right';
 
     /**
      * @var string
      */
-    private $view = 'menu.side-menu-group';
+    public $view = 'menu.side-menu-group';
 
     /**
      * MenuGroup constructor.
      *
-     * @param string $label
-     * @param string $icon
+     * @param array $properties
      */
-    public function __construct(string $label, string $icon = 'fa fa-angle-double-right')
+    public function __construct(array $properties = [])
     {
 
-        $this->label = $label;
-        $this->icon  = $icon;
-        $this->view  = config('sadmin.theme') . '/' . $this->view;
+        parent::__construct($properties);
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
 
     }
 
     /**
      * @return string
-     * @throws \Throwable
+     * @throws Throwable
      */
     public function render()
     {
-        return View::make($this->view)
-            ->with([
-                'label' => $this->label,
-                'icon'  => $this->icon,
-                'items' => $this->items,
-                'urls'  => $this->urls,
-            ])->render();
+
+        View::share('page',$this);
+
+        return View::make($this->view, ['row' => $this])->render();
+
     }
 
     /**
-     * @param $label
-     * @param $url
+     * @param array $properties
      */
-    public function add($label, $url)
+    public function add(array $properties = [])
     {
 
-        $item          = new Stdclass();
-        $item->label   = $label;
-        $item->url     = $url;
+        $item = new \stdClass();
+        $baseProperties = $this->itemProperties;
+
+        foreach ($this->itemProperties as $key => $foo) {
+
+            $item->{$key} = array_key_exists($key, $properties) ? $properties[$key] : $foo;
+
+        }
+
+        array_push($this->urls, $item->url);
         $this->items[] = $item;
-        array_push($this->urls, $url);
-
-    }
-
-    /**
-     * @return string
-     * @throws \Throwable
-     */
-    public function __toString()
-    {
-
-        return $this->render();
 
     }
 
