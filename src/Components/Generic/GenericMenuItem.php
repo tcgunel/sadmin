@@ -9,7 +9,7 @@ use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
  * Class GenericMenuItem
  * @package OmerKamcili\Sadmin\Components\Generic
  */
-class GenericMenuItem implements MenuItemInterface
+class GenericMenuItem extends MenuItemInterface
 {
     /**
      * @var string
@@ -19,7 +19,7 @@ class GenericMenuItem implements MenuItemInterface
     /**
      * @var string
      */
-    public $url;
+    public $url = '#';
 
     /**
      * @var string
@@ -29,22 +29,20 @@ class GenericMenuItem implements MenuItemInterface
     /**
      * @var string
      */
-    private $view = 'menu.generic-bootstrap-li';
+    public $view = 'menu.generic-bootstrap-li';
 
     /**
      * GenericMenuItem constructor.
      *
-     * @param string $label
-     * @param string $url
-     * @param string $icon
+     * @param array $properties
      */
-    public function __construct(string $label, string $url, string $icon = '')
+    public function __construct(array $properties = [])
     {
 
-        $this->label = $label;
-        $this->url   = $url;
-        $this->icon  = $icon;
-        $this->view  = config('sadmin.theme') . '/' . $this->view;
+        parent::__construct($properties);
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
+
 
     }
 
@@ -55,20 +53,7 @@ class GenericMenuItem implements MenuItemInterface
     public function render()
     {
 
-        return View::make($this->view)
-            ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
-            ->render();
-
-    }
-
-    /**
-     * @return string
-     * @throws \Throwable
-     */
-    public function __toString()
-    {
-
-        return $this->render();
+        return View::make($this->view, ['row' => $this])->render();
 
     }
 

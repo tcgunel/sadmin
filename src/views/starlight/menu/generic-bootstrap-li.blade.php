@@ -1,8 +1,8 @@
 <li>
-    <a href="{{ $url }}">
-        @if($icon)
-            <i class="{{ $icon }}"></i>
+    <a href="{{ $row->url }}">
+        @if($row->icon)
+            <i class="{{ $row->icon }}"></i>
         @endif
-        <span class="ml-2">{{ $label }}</span>
+        <span class="ml-2">{{ $row->label }}</span>
     </a>
 </li>

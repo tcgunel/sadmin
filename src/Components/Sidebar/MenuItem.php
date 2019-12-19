@@ -10,13 +10,8 @@ use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
  *
  * @package OmerKamcili\Sadmin\components
  */
-class MenuItem implements MenuItemInterface
+class MenuItem extends MenuItemInterface
 {
-
-    /**
-     * @var string
-     */
-    public $label;
 
     /**
      * @var string
@@ -26,51 +21,32 @@ class MenuItem implements MenuItemInterface
     /**
      * @var string
      */
-    public $icon;
-
-    /**
-     * @var string
-     */
-    private $view = 'menu.side-menu-item';
+    public $view = 'menu.side-menu-item';
 
 
     /**
      * MenuItem constructor.
      *
-     * @param string $label
-     * @param string $url
-     * @param string $icon
+     * @param array $properties
      */
-    public function __construct(string $label, string $url, string $icon = 'fa fa-angle-double-right')
+    public function __construct(array $properties = [])
     {
 
-        $this->label = $label;
-        $this->url   = $url;
-        $this->icon  = $icon;
-        $this->view  = config('sadmin.theme') . '/' . $this->view;
+        parent::__construct($properties);
+
+        $this->view = config('sadmin.theme') . '/' . $this->view;
 
     }
 
     /**
      * @return string
-     * @throws \Throwable
      */
     public function render()
     {
 
-        return View::make($this->view)
-            ->with(['label' => $this->label, 'url' => $this->url, 'icon' => $this->icon])
-            ->render();
-    }
-
-    /**
-     * @return string
-     * @throws \Throwable
-     */
-    public function __toString(): string
-    {
-
-        return $this->render();
+        View::share('page',$this);
+        
+        return View::make($this->view, ['row' => $this])->render();
 
     }
 
