@@ -7,6 +7,6 @@
 </a>
 <ul class="sl-menu-sub nav flex-column">
     @foreach($row->items as $foo)
-        <li class="nav-item"><a href="{{ $foo->url }}" class="nav-link {{ $row->class }}"> {{ $foo->label }}</a></li>
+        <li class="nav-item"><a id="{{ $foo->id }}" href="{{ $foo->url }}" class="nav-link {{ $row->class }}"> {{ $foo->label }}</a></li>
     @endforeach
 </ul>
