@@ -318,7 +318,7 @@ class IconFa {
 	const RECYCLE = 'fa fa-recycle';
 	const REFRESH = 'fa fa-refresh';
 	const REGISTERED = 'fa fa-registered';
-	const REMOVE= 'fa fa-remove';
+	const REMOVE = 'fa fa-remove';
 	const REORDER = 'fa fa-reorder';
 	const REPLY = 'fa fa-reply';
 	const REPLY_ALL = 'fa fa-reply-all';
