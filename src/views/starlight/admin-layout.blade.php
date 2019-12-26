@@ -77,13 +77,7 @@
 <script src="/assets/admin/js/ResizeSensor.js"></script>
 <script src="/assets/admin/lib/select2/js/select2.min.js"></script>
 
-<script>
-    $('.select2').select2({
-        minimumResultsForSearch: Infinity
-    });
-    $('.select2-show-search').select2({
-        minimumResultsForSearch: ''
-    });
-</script>
+@yield('customScripts')
+
 </body>
 </html>

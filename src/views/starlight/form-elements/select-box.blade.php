@@ -2,9 +2,8 @@
     <label class="col-lg-3 col-md-4 form-control-label">{{ $row->label }}:</label>
     <div class="col-lg-9 col-md-8 mg-t-10 mg-sm-t-0">
         <select
-                id="{{ $row->id ? $row->id : uniqid() }}"
-                class="form-control {{ $row->search ? 'select2-show-search' : 'select2' }}
-                @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
+                id="{{ $row->id }}"
+                class="form-control @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
                 {{ $errors->get($row->name) ? ' is-invalid' : '' }}"
                 data-placeholder="{{ $row->placeholder }}"
                 @if($row->required)required @endif>

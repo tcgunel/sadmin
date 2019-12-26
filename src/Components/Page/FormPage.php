@@ -59,6 +59,11 @@ class FormPage implements PageInterface
     public $basicAlerts = [];
 
     /**
+     * @var array
+     */
+    public $script = [];
+
+    /**
      * @var string
      */
     private $view = 'pages/form';
@@ -110,6 +115,27 @@ class FormPage implements PageInterface
     {
 
         $this->form[] = $item;
+
+    }
+
+
+    /**
+     * @param $item
+     */
+    public function addScript($item)
+    {
+
+        $this->script[] = $item;
+
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getScript()
+    {
+
+        return $this->script;
 
     }
 
