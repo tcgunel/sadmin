@@ -85,5 +85,8 @@
         minimumResultsForSearch: ''
     });
 </script>
+
+@yield('customScripts')
+
 </body>
 </html>

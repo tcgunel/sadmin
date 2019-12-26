@@ -33,6 +33,11 @@ class SelectBox extends FormElementInterface
     public $search = false;
 
     /**
+     * $var string
+     */
+    public $script = "{}";
+
+    /**
      * SelectBox constructor.
      *
      * @param array $properties
