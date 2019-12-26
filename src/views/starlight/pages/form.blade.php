@@ -45,4 +45,13 @@
             </div>
         </div>
     </div>
+
+@endsection
+
+@section('customScripts')
+    @foreach($page->getScript() as $script)
+        <script>
+            {!! $script !!}
+        </script>
+    @endforeach
 @endsection

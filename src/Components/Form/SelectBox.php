@@ -28,11 +28,6 @@ class SelectBox extends FormElementInterface
     public $data = [];
 
     /**
-     * @var bool
-     */
-    public $search = false;
-
-    /**
      * $var string
      */
     public $script = "{}";
