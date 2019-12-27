@@ -23,6 +23,10 @@ class MenuItem extends MenuItemInterface
      */
     public $view = 'menu.side-menu-item';
 
+    /**
+     * @var string
+     */
+    public $icon = 'fa fa-angle-double-right';
 
     /**
      * MenuItem constructor.
