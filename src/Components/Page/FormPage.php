@@ -26,7 +26,7 @@ class FormPage implements PageInterface
     /**
      * @var
      */
-    public $form;
+    public $form = [];
 
     /**
      * @var
