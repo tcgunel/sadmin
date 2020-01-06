@@ -12,7 +12,8 @@
                         @if(isset($image['buttons']))
                             @foreach($image['buttons'] as $button)
 
-                                <a href="{{ $button['href'] ?? '#' }}" class="btn btn-sm btn-primary">
+                                <a href="{{ $button['href'] ?? '#' }}" class="btn btn-sm btn-primary"
+                                   @if(isset($button['confirm'])) data-confirm="{{ $button['confirm'] }}" @endif>
                                     {{ $button['label'] ?? 'label' }}
                                 </a>
 
@@ -31,7 +32,6 @@
             </small>
 
         @endif
-
 
     </div>
 </div>
