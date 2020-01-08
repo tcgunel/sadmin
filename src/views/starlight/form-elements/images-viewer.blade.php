@@ -3,25 +3,29 @@
     <div class="col-lg-9 col-md-8 mg-t-10 mg-sm-t-0">
         <div class="row">
 
-            @foreach($row->images as $image)
-                <div class="col-lg-3 text-center mb-3">
-                    <a href="{{ $image['url'] }}">
+            @if(count($row->images))
+                @foreach($row->images as $image)
+                    <div class="col-lg-3 text-center mb-3">
+                        <a href="{{ $image['url'] }}" class="image-modal">
 
-                        <img src="{{ $image['url'] }}" class="img-thumbnail mb-2">
+                            <img src="{{ $image['url'] }}" class="img-thumbnail mb-2">
 
-                        @if(isset($image['buttons']))
-                            @foreach($image['buttons'] as $button)
+                            @if(isset($image['buttons']))
+                                @foreach($image['buttons'] as $button)
 
-                                <a href="{{ $button['href'] ?? '#' }}" class="btn btn-sm btn-primary"
-                                   @if(isset($button['confirm'])) data-confirm="{{ $button['confirm'] }}" @endif>
-                                    {{ $button['label'] ?? 'label' }}
-                                </a>
+                                    <a href="{{ $button['href'] ?? '#' }}" class="btn btn-sm btn-primary"
+                                       @if(isset($button['confirm'])) data-confirm="{{ $button['confirm'] }}" @endif>
+                                        {{ $button['label'] ?? 'label' }}
+                                    </a>
 
-                            @endforeach
-                        @endif
-                    </a>
-                </div>
-            @endforeach
+                                @endforeach
+                            @endif
+                        </a>
+                    </div>
+                @endforeach
+            @else
+                There are no image
+            @endif
 
         </div>
 

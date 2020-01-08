@@ -62,6 +62,19 @@
 
 </div>
 
+<div aria-hidden="true" class="modal fade" id="image-modal" role="dialog" tabindex="-1">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-body mb-0 p-0" id="image-modal-body"></div>
+            <div class="modal-footer">
+                <button class="btn btn-outline-primary btn-rounded btn-md ml-4 text-center" data-dismiss="modal"
+                        type="button">Close
+                </button>
+            </div>
+        </div>
+    </div>
+</div>
+
 <script src="/assets/admin/lib/jquery/jquery.js"></script>
 <script src="/assets/admin/lib/popper.js/popper.js"></script>
 <script src="/assets/admin/lib/bootstrap/bootstrap.js"></script>
