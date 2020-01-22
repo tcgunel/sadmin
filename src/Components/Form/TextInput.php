@@ -17,6 +17,11 @@ class TextInput extends FormElementInterface
     /**
      * @var
      */
+    public $step;
+
+    /**
+     * @var
+     */
     public $type = TextInputTypes::TEXT;
 
     /**
