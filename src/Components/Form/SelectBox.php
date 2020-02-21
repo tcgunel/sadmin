@@ -23,6 +23,11 @@ class SelectBox extends FormElementInterface
     public $selected;
 
     /**
+     * @var
+     */
+    public $multiple;
+
+    /**
      * @var array
      */
     public $data = [];
