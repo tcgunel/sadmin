@@ -7,6 +7,7 @@
                 class="form-control @if(is_array($row->class)){{ implode(' ',$row->class) }} @elseif(is_string($row->class)) {{ $row->class }} @endif
                 {{ $errors->get($row->name) ? ' is-invalid' : '' }}"
                 data-placeholder="{{ $row->placeholder }}"
+                @if($row->multiple) multiple="multiple" @endif
                 @if($row->required)required @endif>
             <option label="{{ $row->placeholder }}"></option>
             @foreach($row->data as $key => $label)
