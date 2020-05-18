@@ -38,7 +38,7 @@ class MenuItem extends MenuItemInterface
 
         parent::__construct($properties);
 
-        $this->view = config('sadmin.theme') . '/' . $this->view;
+        $this->view = 'sadmin::' . config('sadmin.theme') . '/' . $this->view;
 
     }
 
@@ -48,8 +48,8 @@ class MenuItem extends MenuItemInterface
     public function render()
     {
 
-        View::share('page',$this);
-        
+        View::share('page', $this);
+
         return View::make($this->view, ['row' => $this])->render();
 
     }

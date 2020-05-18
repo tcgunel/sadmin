@@ -35,7 +35,7 @@ class ImagesViewer extends FormElementInterface
 
         parent::__construct($properties);
 
-        $this->view = config('sadmin.theme') . '/' . $this->view;
+        $this->view = 'sadmin::' . config('sadmin.theme') . '/' . $this->view;
 
     }
 

@@ -16,7 +16,7 @@ class SideMenu implements IteratorAggregate
     /**
      * @var
      */
-    private $items;
+    private $items = [];
 
     /**
      * @param MenuItem $item

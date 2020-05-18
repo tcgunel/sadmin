@@ -17,7 +17,7 @@ class ProfileMenu implements IteratorAggregate
     /**
      * @var
      */
-    private $items;
+    private $items = [];
 
     /**
      * @var

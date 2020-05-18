@@ -46,7 +46,7 @@ class MenuGroup extends MenuItemInterface
 
         parent::__construct($properties);
 
-        $this->view = config('sadmin.theme') . '/' . $this->view;
+        $this->view = 'sadmin::' . config('sadmin.theme') . '/' . $this->view;
 
     }
 
@@ -57,7 +57,7 @@ class MenuGroup extends MenuItemInterface
     public function render()
     {
 
-        View::share('page',$this);
+        View::share('page', $this);
 
         return View::make($this->view, ['row' => $this])->render();
 
@@ -69,7 +69,7 @@ class MenuGroup extends MenuItemInterface
     public function add(array $properties = [])
     {
 
-        $item = new \stdClass();
+        $item           = new \stdClass();
         $baseProperties = $this->itemProperties;
 
         foreach ($this->itemProperties as $key => $foo) {

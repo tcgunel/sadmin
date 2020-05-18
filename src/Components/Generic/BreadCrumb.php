@@ -29,7 +29,7 @@ class BreadCrumb
     public function __construct()
     {
 
-        $this->view = config('sadmin.theme') . '/' . $this->view;
+        $this->view = 'sadmin::' . config('sadmin.theme') . '/' . $this->view;
 
     }
 

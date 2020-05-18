@@ -21,7 +21,6 @@
         @foreach($sideMenu as $foo)
             {!! $foo !!}
         @endforeach
-
     </div>
     <br>
 </div>
