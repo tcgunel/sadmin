@@ -1,4 +1,4 @@
-@extends('starlight.admin-layout')
+@extends('sadmin::default.admin-layout')
 @section('page')
     {!! $page->getBreadCrumb() !!}
     <div class="sl-pagebody">

@@ -1,11 +1,11 @@
-@extends('starlight.admin-layout')
+@extends('sadmin::default.admin-layout')
 @section('page')
 
     {!! $page->getBreadCrumb() !!}
 
     <div class="sl-pagebody">
 
-        @include('starlight.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
+        @include('sadmin.default.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
 
         <div class="card pd-sm-40">
             @if($page->title)

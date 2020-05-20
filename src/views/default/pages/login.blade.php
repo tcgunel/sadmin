@@ -8,9 +8,7 @@
 <body>
 
 <div class="d-flex align-items-center justify-content-center bg-sl-primary ht-100v">
-
-    @include('starlight.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
-
+    @include('sadmin::default.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
     <form action="{{ $page->actionUrl }}" method="{{ $page->method }}"
           class="login-wrapper wd-300 wd-xs-350 pd-25 pd-xs-40 bg-white">
 
