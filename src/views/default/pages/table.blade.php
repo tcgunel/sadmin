@@ -5,7 +5,7 @@
 
     <div class="sl-pagebody">
 
-        @include('sadmin.default.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
+        @include('sadmin::default.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
 
         <div class="card pd-sm-40">
             @if($page->title)
