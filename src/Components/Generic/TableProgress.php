@@ -74,7 +74,7 @@ class TableProgress
 
             foreach ($data as $dataKey => $dataValue) {
 
-                if (is_int($dataValue) or is_string($dataValue)) {
+                if (in_array(gettype($dataValue), ['boolean', 'integer', 'double', 'string', 'float'])) {
 
                     $url = str_replace('{' . $dataKey . '}', $dataValue, $url);
 
