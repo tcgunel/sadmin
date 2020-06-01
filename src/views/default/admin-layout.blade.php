@@ -38,7 +38,7 @@
         <nav class="nav">
             <div class="dropdown">
                 <a href="" class="nav-link nav-link-profile" data-toggle="dropdown">
-                    <span class="logged-name">{{ $profileMenu->fullName }}</span>
+                    <span class="logged-name">{{ $profileMenu->label }}</span>
                     @if($profileMenu->imageUrl)
                         <img src="{{ $profileMenu->imageUrl }}" class="wd-32 rounded-circle">
                     @endif
