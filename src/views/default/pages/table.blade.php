@@ -35,7 +35,7 @@
                                 @foreach($page->getFields() as $key => $bar)
                                     <td>
                                         @if(isset($page->formatter[$key]))
-                                            {!! $page->formatter[$key]($foo->{$key}) !!}
+                                            {!! $page->formatter[$key]($foo->{$key}, $foo) !!}
                                         @else
                                             {!! $foo->{$key} !!}
                                         @endif
