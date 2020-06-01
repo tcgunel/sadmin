@@ -49,7 +49,7 @@
                     @else
                         <tr>
                             <td colspan="{{ count($page->getFields()) }}">
-                                {{ _('No records') }}
+                                {{ __('No records') }}
                             </td>
                         </tr>
                     @endif
