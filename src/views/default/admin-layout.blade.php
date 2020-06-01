@@ -9,7 +9,8 @@
     <link href="/assets/admin/lib/perfect-scrollbar/css/perfect-scrollbar.css" rel="stylesheet">
     <link href="/assets/admin/lib/rickshaw/rickshaw.min.css" rel="stylesheet">
     <link href="/assets/admin/lib/select2/css/select2.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="/assets/admin/css/theme.css">
+    <link href="/assets/admin/css/sweetalert2.css" rel="stylesheet">
+    <link href="/assets/admin/css/theme.css" rel="stylesheet">
 </head>
 
 <body>
@@ -88,7 +89,27 @@
 <script src="/assets/admin/js/admin.js"></script>
 <script src="/assets/admin/js/ResizeSensor.js"></script>
 <script src="/assets/admin/lib/select2/js/select2.min.js"></script>
+<script src="/assets/admin/js/sweetalert2.js"></script>
 
+<script>
+    $(document).ready(function () {
+        $('a[data-confirm]').click(function (e) {
+            e.preventDefault();
+            var url = $(this).attr('href');
+            Swal.fire({
+                title: $(this).data('confirm'),
+                type: 'question',
+                showCancelButton: true,
+                confirmButtonText: '{{ __('Yes') }}',
+                cancelButtonText: '{{ __('Cancel') }}'
+            }).then((result) => {
+                if (result.value) {
+                    window.location.href = url;
+                }
+            });
+        })
+    });
+</script>
 @yield('customScripts')
 
 </body>

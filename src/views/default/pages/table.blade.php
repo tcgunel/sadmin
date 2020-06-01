@@ -9,10 +9,10 @@
 
         <div class="card pd-sm-40">
             @if($page->title)
-                <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">{{ $page->title }}</h6>
+                <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">{!! $page->title !!}</h6>
             @endif
             @if($page->description)
-                <p class="mg-b-30 tx-gray-600">{{ $page->description }}</p>
+                <p class="mg-b-30 tx-gray-600">{!! $page->description !!}</p>
             @endif
             <div class="table-responsive">
                 <table class="table table-hover table-bordered mg-b-0">
