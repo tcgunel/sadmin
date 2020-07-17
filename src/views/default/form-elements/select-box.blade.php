@@ -11,7 +11,7 @@
                 @if($row->required)required @endif>
             <option label="{{ $row->placeholder }}"></option>
             @foreach($row->data as $key => $label)
-                <option value="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) == $key ? ' selected' : '') }}>{{ $label }}</option>
+                <option value="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) === $key ? ' selected' : '') }}>{{ $label }}</option>
             @endforeach
 
         </select>
