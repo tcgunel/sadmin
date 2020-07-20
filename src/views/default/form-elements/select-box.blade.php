@@ -9,9 +9,16 @@
                 data-placeholder="{{ $row->placeholder }}"
                 @if($row->multiple) multiple="multiple" @endif
                 @if($row->required)required @endif>
-            <option label="{{ $row->placeholder }}"></option>
+            @if(!$row->multiple && !is_array($row->selected))
+                <option label="{{ $row->placeholder }}"></option> @endif
             @foreach($row->data as $key => $label)
-                <option value="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) === $key ? ' selected' : '') }}>{{ $label }}</option>
+                @if(is_array($row->selected))
+                    <option
+                            value="{{ $key }}" {{ in_array($key, $row->selected) == $key ? ' selected' : (in_array($key, old($row->name) ?? []) ? ' selected' : '') }}>{{ $label }}</option>
+                @else
+                    <option
+                            value="{{ $key }}" {{ $row->selected == $key ? ' selected' : (old($row->name) === $key ? ' selected' : '') }}>{{ $label }}</option>
+                @endif
             @endforeach
 
         </select>
