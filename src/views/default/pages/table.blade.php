@@ -7,7 +7,24 @@
 
         @include('sadmin::default.alerts.html-alerts', ['alerts' => $page->getBasicAlerts()])
 
-        <div class="card pd-sm-40">
+        @if(count($page->filters))
+            <div class="card pd-sm-20">
+                <form class="row" method="get" action="{{ $page->filterAction }}">
+                    @foreach($page->filters as $filter)
+                        <div class="col-md-3 mb-2">
+                            {!! $filter->render() !!}
+                        </div>
+                    @endforeach
+                    <div class="col-md-1">
+                        <button type="submit" class="btn btn-success"
+                                style="cursor:pointer;">{{ $page->filterButtonText ?? 'Submit' }}</button>
+                    </div>
+                </form>
+            </div>
+            <br>
+        @endif
+
+        <div class="card pd-sm-20">
             @if($page->title)
                 <h6 class="tx-gray-800 tx-uppercase tx-bold tx-14 mg-b-10">{!! $page->title !!}</h6>
             @endif

@@ -37,8 +37,9 @@ class TableProgress
      * @param string $icon
      * @param string $colorType
      * @param string $class
+     * @param string $target
      */
-    public function addItem(string $url, string $icon, string $colorType, string $class = '')
+    public function addItem(string $url, string $icon, string $colorType, string $class = '', string $target = '')
     {
 
         $this->items[] = [
@@ -46,6 +47,7 @@ class TableProgress
             'icon'      => $icon,
             'colorType' => $colorType,
             'class'     => $class,
+            'target'    => $target,
         ];
 
     }

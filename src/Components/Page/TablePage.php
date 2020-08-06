@@ -64,6 +64,21 @@ class TablePage implements PageInterface
     public $formatter = [];
 
     /**
+     * @var array
+     */
+    public $filters = [];
+
+    /**
+     * @var
+     */
+    public $filterAction;
+
+    /**
+     * @var
+     */
+    public $filterButtonText;
+
+    /**
      * TablePage constructor.
      */
     public function __construct()
@@ -203,6 +218,18 @@ class TablePage implements PageInterface
 
         $this->progress = $progress;
 
+    }
+
+    /**
+     * @param $item
+     *
+     * @return TablePage
+     */
+    public function addFilterItem($item)
+    {
+        $this->filters[] = $item;
+
+        return $this;
     }
 
 }
