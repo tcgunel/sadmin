@@ -1,6 +1,6 @@
 <?php
 
-namespace OmerKamcili\Sadmin;
+namespace TCGunel\Sadmin;
 
 use Illuminate\Routing\Controller;
 use Illuminate\Support\Facades\View;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 /**
  * Class SadminBaseController
  *
- * @package OmerKamcili\Sadmin
+ * @package TCGunel\Sadmin
  */
 abstract class BaseController extends Controller implements BaseInterface
 {

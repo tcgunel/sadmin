@@ -1,11 +1,11 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Interfaces;
+namespace TCGunel\Sadmin\Components\Interfaces;
 
 /**
  * Interface PaginationInterface
  *
- * @package OmerKamcili\Sadmin\Components\Interfaces
+ * @package TCGunel\Sadmin\Components\Interfaces
  */
 interface PaginationInterface
 {

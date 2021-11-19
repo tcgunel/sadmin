@@ -1,15 +1,15 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Test\Components;
+namespace TCGunel\Sadmin\Test\Components;
 
-use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
-use OmerKamcili\Sadmin\Components\Generic\GenericMenuItem;
+use TCGunel\Sadmin\Components\Generic\BreadCrumb;
+use TCGunel\Sadmin\Components\Generic\GenericMenuItem;
 use Tests\TestCase;
 
 /**
  * Class GenericTest
  *
- * @package OmerKamcili\Sadmin\Test\Components
+ * @package TCGunel\Sadmin\Test\Components
  */
 class GenericTest extends TestCase
 {
@@ -20,7 +20,7 @@ class GenericTest extends TestCase
     {
 
         $object = new BreadCrumb();
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\BreadCrumb', $object);
+        $this->assertInstanceOf('TCGunel\Sadmin\Components\Generic\BreadCrumb', $object);
         $object->addItem('foo', 'bar');
         $this->assertIsArray($object->items);
         $firstItem = reset($object->items);
@@ -36,7 +36,7 @@ class GenericTest extends TestCase
     {
 
         $object = new GenericMenuItem('foo', 'bar', 'icon');
-        $this->assertInstanceOf('OmerKamcili\Sadmin\Components\Generic\GenericMenuItem', $object);
+        $this->assertInstanceOf('TCGunel\Sadmin\Components\Generic\GenericMenuItem', $object);
         $this->assertSame($object->label, 'foo');
         $this->assertSame($object->url, 'bar');
         $this->assertSame($object->icon, 'icon');

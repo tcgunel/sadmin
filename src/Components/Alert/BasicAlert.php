@@ -1,12 +1,12 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Alert;
+namespace TCGunel\Sadmin\Components\Alert;
 
 use Illuminate\Support\Facades\View;
 
 /**
  * Class BasicAlert
- * @package OmerKamcili\Sadmin\Components\Alert
+ * @package TCGunel\Sadmin\Components\Alert
  */
 class BasicAlert
 {

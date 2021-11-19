@@ -1,14 +1,14 @@
 <?php
 
-namespace OmerKamcili\Sadmin;
+namespace TCGunel\Sadmin;
 
-use OmerKamcili\Sadmin\Components\Profile\ProfileMenu;
-use OmerKamcili\Sadmin\Components\Sidebar\SideMenu;
+use TCGunel\Sadmin\Components\Profile\ProfileMenu;
+use TCGunel\Sadmin\Components\Sidebar\SideMenu;
 
 /**
  * Interface BaseInterface
  *
- * @package OmerKamcili\Sadmin
+ * @package TCGunel\Sadmin
  */
 interface BaseInterface
 {

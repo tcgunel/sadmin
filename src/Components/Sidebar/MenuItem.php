@@ -1,14 +1,14 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Sidebar;
+namespace TCGunel\Sadmin\Components\Sidebar;
 
 use Illuminate\Support\Facades\View;
-use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
+use TCGunel\Sadmin\Components\Interfaces\MenuItemInterface;
 
 /**
  * Class SadminMenuItem
  *
- * @package OmerKamcili\Sadmin\components
+ * @package TCGunel\Sadmin\components
  */
 class MenuItem extends MenuItemInterface
 {

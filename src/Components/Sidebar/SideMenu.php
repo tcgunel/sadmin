@@ -1,15 +1,15 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Sidebar;
+namespace TCGunel\Sadmin\Components\Sidebar;
 
 use ArrayIterator;
 use IteratorAggregate;
-use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
+use TCGunel\Sadmin\Components\Interfaces\MenuItemInterface;
 
 /**
  * Class SideMenu
  *
- * @package OmerKamcili\Sadmin\components
+ * @package TCGunel\Sadmin\components
  */
 class SideMenu implements IteratorAggregate
 {

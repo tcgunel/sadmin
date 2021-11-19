@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Interfaces;
+namespace TCGunel\Sadmin\Components\Interfaces;
 
-use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
+use TCGunel\Sadmin\Components\Generic\BreadCrumb;
 
 /**
  * Interface SadminPageInterface
  *
- * @package OmerKamcili\Sadmin\views
+ * @package TCGunel\Sadmin\views
  */
 interface PageInterface
 {

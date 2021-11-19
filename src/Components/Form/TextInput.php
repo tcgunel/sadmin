@@ -1,15 +1,15 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Form;
+namespace TCGunel\Sadmin\Components\Form;
 
-use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
-use OmerKamcili\Sadmin\Constants\Form\TextInputTypes;
+use TCGunel\Sadmin\Components\Interfaces\FormElementInterface;
+use TCGunel\Sadmin\Constants\Form\TextInputTypes;
 use Illuminate\Support\Facades\View;
 
 /**
  * Class SadminTextInput
  *
- * @package OmerKamcili\Sadmin\components\form
+ * @package TCGunel\Sadmin\components\form
  */
 class TextInput extends FormElementInterface
 {

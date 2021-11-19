@@ -1,17 +1,17 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Page;
+namespace TCGunel\Sadmin\Components\Page;
 
-use OmerKamcili\Sadmin\components\generic\BreadCrumb;
-use OmerKamcili\Sadmin\components\interfaces\FormElementInterface;
-use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
-use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
+use TCGunel\Sadmin\components\generic\BreadCrumb;
+use TCGunel\Sadmin\components\interfaces\FormElementInterface;
+use TCGunel\Sadmin\Components\Interfaces\AddableBasicAlert;
+use TCGunel\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
  * Class SadminFormPage
  *
- * @package OmerKamcili\Sadmin\components\page
+ * @package TCGunel\Sadmin\components\page
  */
 class FormPage implements PageInterface
 {

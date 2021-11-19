@@ -1,12 +1,12 @@
 <?php
 
-namespace OmerKamcili\Sadmin;
+namespace TCGunel\Sadmin;
 
 use Illuminate\Support\ServiceProvider;
 
 /**
  * Class SadminServiceProvider
- * @package OmerKamcili\Sadmin
+ * @package TCGunel\Sadmin
  */
 class SadminServiceProvider extends ServiceProvider
 {

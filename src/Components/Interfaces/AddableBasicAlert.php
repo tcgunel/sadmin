@@ -1,12 +1,12 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Interfaces;
+namespace TCGunel\Sadmin\Components\Interfaces;
 
-use OmerKamcili\Sadmin\Components\Alert\BasicAlert;
+use TCGunel\Sadmin\Components\Alert\BasicAlert;
 
 /**
  * Trait AddableBasicAlert
- * @package OmerKamcili\Sadmin\Components\Interfaces
+ * @package TCGunel\Sadmin\Components\Interfaces
  */
 trait AddableBasicAlert
 {

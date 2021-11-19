@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Interfaces;
+namespace TCGunel\Sadmin\Components\Interfaces;
 
 use Illuminate\Support\Facades\View;
 
 /**
  * Interface SadminFormElementInterface
  *
- * @package OmerKamcili\Sadmin\components\interfaces
+ * @package TCGunel\Sadmin\components\interfaces
  */
 abstract class FormElementInterface
 {

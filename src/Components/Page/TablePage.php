@@ -1,17 +1,17 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Page;
+namespace TCGunel\Sadmin\Components\Page;
 
-use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
-use OmerKamcili\Sadmin\Components\Generic\TableProgress;
-use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
-use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
+use TCGunel\Sadmin\Components\Generic\BreadCrumb;
+use TCGunel\Sadmin\Components\Generic\TableProgress;
+use TCGunel\Sadmin\Components\Interfaces\AddableBasicAlert;
+use TCGunel\Sadmin\Components\Interfaces\PageInterface;
 use Illuminate\Support\Facades\View;
 
 /**
  * Class TablePage
  *
- * @package OmerKamcili\Sadmin\Components\Page
+ * @package TCGunel\Sadmin\Components\Page
  */
 class TablePage implements PageInterface
 {

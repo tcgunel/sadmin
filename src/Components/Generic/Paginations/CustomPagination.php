@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Generic\Paginations;
+namespace TCGunel\Sadmin\Components\Generic\Paginations;
 
-use OmerKamcili\Sadmin\Components\Interfaces\PaginationInterface;
+use TCGunel\Sadmin\Components\Interfaces\PaginationInterface;
 use Illuminate\Support\Facades\View;
 
 /**
  * Class CustomPagination
- * @package OmerKamcili\Sadmin\Components\Generic\Paginations
+ * @package TCGunel\Sadmin\Components\Generic\Paginations
  */
 class CustomPagination implements PaginationInterface
 {

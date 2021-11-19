@@ -1,6 +1,6 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Generic;
+namespace TCGunel\Sadmin\Components\Generic;
 
 use stdClass;
 use Illuminate\Support\Facades\View;
@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\View;
 /**
  * Class SadminBreadCrumb
  *
- * @package OmerKamcili\Sadmin\components\generic
+ * @package TCGunel\Sadmin\components\generic
  */
 class BreadCrumb
 {

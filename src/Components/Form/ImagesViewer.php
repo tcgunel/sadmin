@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Form;
+namespace TCGunel\Sadmin\Components\Form;
 
-use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
+use TCGunel\Sadmin\Components\Interfaces\FormElementInterface;
 use Illuminate\Support\Facades\View;
 
 /**
  * Class ImagesViewer
- * @package OmerKamcili\Sadmin\Components\Form
+ * @package TCGunel\Sadmin\Components\Form
  *
  * TODO: Confirmable button will be added
  *

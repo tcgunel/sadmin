@@ -1,10 +1,10 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Alert;
+namespace TCGunel\Sadmin\Components\Alert;
 
 /**
  * Class BasicAlertTypes
- * @package OmerKamcili\Sadmin\Components\Alert
+ * @package TCGunel\Sadmin\Components\Alert
  */
 class BasicAlertTypes
 {

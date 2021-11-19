@@ -1,11 +1,11 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Constants\Icons;
+namespace TCGunel\Sadmin\Constants\Icons;
 
 /**
  * Class IconFa
  *
- * @package OmerKamcili\Sadmin\Constants\Icons
+ * @package TCGunel\Sadmin\Constants\Icons
  */
 class IconFa {
 

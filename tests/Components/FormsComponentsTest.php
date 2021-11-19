@@ -1,17 +1,17 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Test\Components;
+namespace TCGunel\Sadmin\Test\Components;
 
-use OmerKamcili\Sadmin\Components\Form\SelectBox;
-use OmerKamcili\Sadmin\Components\Form\TextArea;
-use OmerKamcili\Sadmin\Components\Form\TextInput;
-use OmerKamcili\Sadmin\Constants\Form\TextInputTypes;
+use TCGunel\Sadmin\Components\Form\SelectBox;
+use TCGunel\Sadmin\Components\Form\TextArea;
+use TCGunel\Sadmin\Components\Form\TextInput;
+use TCGunel\Sadmin\Constants\Form\TextInputTypes;
 use Tests\TestCase;
 
 /**
  * Class FormsComponentsTest
  *
- * @package OmerKamcili\Sadmin\Test\Components
+ * @package TCGunel\Sadmin\Test\Components
  */
 class FormsComponentsTest extends TestCase
 {

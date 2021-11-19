@@ -1,15 +1,15 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Page;
+namespace TCGunel\Sadmin\Components\Page;
 
 use Illuminate\Support\Facades\View;
-use OmerKamcili\Sadmin\Components\Generic\BreadCrumb;
-use OmerKamcili\Sadmin\Components\Interfaces\PageInterface;
-use OmerKamcili\Sadmin\Components\Interfaces\AddableBasicAlert;
+use TCGunel\Sadmin\Components\Generic\BreadCrumb;
+use TCGunel\Sadmin\Components\Interfaces\PageInterface;
+use TCGunel\Sadmin\Components\Interfaces\AddableBasicAlert;
 
 /**
  * Class LoginPage
- * @package OmerKamcili\Sadmin\Components\Page
+ * @package TCGunel\Sadmin\Components\Page
  */
 class LoginPage implements PageInterface
 {

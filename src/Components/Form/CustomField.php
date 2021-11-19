@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Form;
+namespace TCGunel\Sadmin\Components\Form;
 
 use Illuminate\Support\Facades\View;
-use OmerKamcili\Sadmin\Components\Interfaces\FormElementInterface;
+use TCGunel\Sadmin\Components\Interfaces\FormElementInterface;
 
 /**
  * Class CustomField
- * @package OmerKamcili\Sadmin\Components\Form
+ * @package TCGunel\Sadmin\Components\Form
  */
 class CustomField extends FormElementInterface
 {

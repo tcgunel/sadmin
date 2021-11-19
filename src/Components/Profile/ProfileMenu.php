@@ -1,15 +1,15 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Profile;
+namespace TCGunel\Sadmin\Components\Profile;
 
 use ArrayIterator;
-use OmerKamcili\Sadmin\Components\Generic\GenericMenuItem;
+use TCGunel\Sadmin\Components\Generic\GenericMenuItem;
 use IteratorAggregate;
 
 /**
  * Class ProfileMenu
  *
- * @package OmerKamcili\Sadmin\components
+ * @package TCGunel\Sadmin\components
  */
 class ProfileMenu implements IteratorAggregate
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Interfaces;
+namespace TCGunel\Sadmin\Components\Interfaces;
 
 use Illuminate\Support\Facades\View;
 
 /**
  * Interface SadminFormElementInterface
  *
- * @package OmerKamcili\Sadmin\components\interfaces
+ * @package TCGunel\Sadmin\components\interfaces
  */
 abstract class MenuItemInterface
 {
@@ -16,7 +16,7 @@ abstract class MenuItemInterface
      * @var
      */
     public $id = '';
-    
+
     /**
      * @var
      */
@@ -144,7 +144,7 @@ abstract class MenuItemInterface
         $this->view = $view;
     }
 
-  
+
 
     /**
      * @return string

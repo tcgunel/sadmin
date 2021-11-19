@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Generic;
+namespace TCGunel\Sadmin\Components\Generic;
 
 use Illuminate\Support\Facades\View;
-use OmerKamcili\Sadmin\Components\Interfaces\MenuItemInterface;
+use TCGunel\Sadmin\Components\Interfaces\MenuItemInterface;
 
 /**
  * Class GenericMenuItem
- * @package OmerKamcili\Sadmin\Components\Generic
+ * @package TCGunel\Sadmin\Components\Generic
  */
 class GenericMenuItem extends MenuItemInterface
 {

@@ -1,13 +1,13 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Components\Generic;
+namespace TCGunel\Sadmin\Components\Generic;
 
 use Illuminate\Support\Facades\View;
 
 /**
  * Class TableProgress
  *
- * @package OmerKamcili\Sadmin\Components\Generic
+ * @package TCGunel\Sadmin\Components\Generic
  */
 class TableProgress
 {

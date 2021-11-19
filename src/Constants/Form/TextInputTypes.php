@@ -1,11 +1,11 @@
 <?php
 
-namespace OmerKamcili\Sadmin\Constants\Form;
+namespace TCGunel\Sadmin\Constants\Form;
 
 /**
  * Class TextInputTypes
  *
- * @package OmerKamcili\Sadmin\Constants\Form
+ * @package TCGunel\Sadmin\Constants\Form
  */
 class TextInputTypes
 {
