@@ -1,21 +1,21 @@
 {
-  "name": "omerkamcili/sadmin",
+  "name": "tcgunel/sadmin",
   "description": "Ready to use Admin Panel for Laravel",
   "type": "library",
   "authors": [
     {
-      "name": "Ömer Kamçılı",
-      "email": "omerkamcili@gmail.com"
+      "name": "Tolga Can Günel",
+      "email": "info@mobius.studio"
     }
   ],
   "autoload": {
     "psr-4": {
-      "OmerKamcili\\Sadmin\\": "src/"
+      "TCGunel\\Sadmin\\": "src/"
     }
   },
   "autoload-dev": {
     "psr-4": {
-      "OmerKamcili\\Sadmin\\Test\\": "tests/"
+      "TCGunel\\Sadmin\\Test\\": "tests/"
     }
   },
   "require": {
