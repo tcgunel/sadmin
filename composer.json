@@ -20,6 +20,6 @@
   },
   "require": {
     "php": "^7.3",
-    "laravel/framework": "^8.0.0"
+    "laravel/framework": "^8.0"
   }
 }
