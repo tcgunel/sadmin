@@ -79,6 +79,11 @@ class TablePage implements PageInterface
     public $filterButtonText;
 
     /**
+     * @var array
+     */
+    public $script = [];
+
+    /**
      * TablePage constructor.
      */
     public function __construct()
@@ -230,6 +235,26 @@ class TablePage implements PageInterface
         $this->filters[] = $item;
 
         return $this;
+    }
+
+    /**
+     * @param $item
+     */
+    public function addScript($item)
+    {
+
+        $this->script[] = $item;
+
+    }
+
+    /**
+     * @return array|null
+     */
+    public function getScript()
+    {
+
+        return $this->script;
+
     }
 
 }
