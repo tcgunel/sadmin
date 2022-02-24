@@ -11,6 +11,7 @@
             placeholder="{{ $row->placeholder }}"
             value="{{ $row->value ? $row->value : (old($row->name) && $row->type != 'password' ? old($row->name) : '') }}"
             @if($row->step) step="{{ $row->step }}" @endif
+            @if($row->autocomplete) autocomplete="{{ $row->autocomplete }}" @endif
             @if($row->required)required @endif>
 
         @if(isset($errors) && $errors->get($row->name))
