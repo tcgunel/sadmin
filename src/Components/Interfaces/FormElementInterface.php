@@ -55,6 +55,11 @@ abstract class FormElementInterface
     /**
      * @var
      */
+    public $autocomplete = null;
+
+    /**
+     * @var
+     */
     public $view;
 
     /**
