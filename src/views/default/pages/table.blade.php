@@ -47,8 +47,8 @@
                     <tbody>
                     @if(count($page->getData()) > 0)
                         @foreach($page->getData() as $foo)
-                            <tr>
-                                @php($foo = (object) $foo)
+                            @php($foo = (object) $foo)
+                            <tr @if(data_get($foo, 'id')) data-id="{{ $foo->id }}" @endif>
                                 @foreach($page->getFields() as $key => $bar)
                                     <td>
                                         @if(isset($page->formatter[$key]))
